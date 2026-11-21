@@ -1,0 +1,291 @@
+{
+ "_note": "Mock data for the direction round's pictures only. It is NOT the stage 3 records file. Every id here is reserved: stage 3 keeps it with the same meaning and never renumbers it. All names, identifiers, addresses and numbers are invented. Missing values are absent or null, never an empty string. Contact addresses use example.test; phone numbers are 555-01xx.",
+ "clinic": {
+  "id": "cl-01",
+  "name": "Harbor Street Clinic",
+  "timeZone": "America/New_York",
+  "timeZoneLabel": {
+   "edt": "Eastern Daylight Time (EDT, UTC-4)",
+   "est": "Eastern Standard Time (EST, UTC-5)"
+  }
+ },
+ "today": {
+  "date": "2026-10-30",
+  "weekday": "Friday",
+  "time": "09:05",
+  "utcOffset": "-04:00",
+  "note": "Clocks go back on Sunday 2026-11-01 at 02:00 local (EDT to EST). The sample dates sit either side so stage 3 can show a repeated local time (01:00 to 02:00 occurs twice on 2026-11-01) from the same data."
+ },
+ "formatting": {
+  "en": "12-hour time with AM or PM, abbreviated weekday and month (Fri, Oct 30), the time zone named once per screen and abbreviated beside a time that could be ambiguous; Western digits",
+  "ar": "24-hour time, day and month in Arabic words, Western digits as the page default (Arabic-Indic digits are shown once as a labeled example); Latin names, references (APT-0042) and times are isolated runs",
+  "missing": "a missing value is absent or null; the screen shows a short plain phrase (for example No phone number), never a blank"
+ },
+ "clinicians": [
+  {
+   "id": "cn-01",
+   "name": "Ana Reyes",
+   "initials": "AR"
+  },
+  {
+   "id": "cn-02",
+   "name": "Tomas Ferreira",
+   "initials": "TF"
+  },
+  {
+   "id": "cn-03",
+   "name": "Christopher Alexander Montgomery-Whitfield",
+   "initials": "CM"
+  }
+ ],
+ "patients": [
+  {
+   "id": "pt-0001",
+   "name": "Jo Marsh",
+   "initials": "JM",
+   "avatar": null,
+   "phone": "555-0101",
+   "email": "jo.marsh@example.test"
+  },
+  {
+   "id": "pt-0002",
+   "name": "ليلى حداد",
+   "latin": "Layla Haddad",
+   "initials": "ل",
+   "avatar": null,
+   "phone": "555-0142",
+   "language": "ar"
+  },
+  {
+   "id": "pt-0003",
+   "name": "Walter Brandt",
+   "initials": "WB",
+   "avatar": null,
+   "phone": "555-0103",
+   "email": "walter.brandt@example.test"
+  },
+  {
+   "id": "pt-0004",
+   "name": "Maria Santos",
+   "identifier": "CLY-482917",
+   "initials": "MS",
+   "avatar": null,
+   "phone": "555-0104"
+  },
+  {
+   "id": "pt-0005",
+   "name": "Maria Santos",
+   "identifier": "CLY-482930",
+   "initials": "MS",
+   "avatar": null,
+   "email": "maria.santos@example.test"
+  },
+  {
+   "id": "pt-0006",
+   "name": "أحمد المنصوري",
+   "latin": "Ahmad Al-Mansouri",
+   "initials": "أ",
+   "avatar": null,
+   "phone": "555-0106",
+   "language": "ar"
+  },
+  {
+   "id": "pt-0007",
+   "name": "Alexandria Konstantinopolous-Papadimitriou",
+   "initials": "AK",
+   "avatar": null,
+   "phone": "555-0107"
+  },
+  {
+   "id": "pt-0008",
+   "name": "نورا العبيدي",
+   "latin": "Noura Al-Obaidi",
+   "initials": "ن",
+   "avatar": null,
+   "language": "ar"
+  }
+ ],
+ "appointments": [
+  {
+   "id": "apt-0038",
+   "ref": "APT-0038",
+   "patient": "pt-0001",
+   "clinician": "cn-01",
+   "start": "2026-10-30T09:00:00-04:00",
+   "durationMinutes": 30,
+   "status": "Completed",
+   "lane": 0
+  },
+  {
+   "id": "apt-0040",
+   "ref": "APT-0040",
+   "patient": "pt-0004",
+   "clinician": "cn-01",
+   "start": "2026-10-30T10:00:00-04:00",
+   "durationMinutes": 45,
+   "status": "Missed",
+   "lane": 0
+  },
+  {
+   "id": "apt-0041",
+   "ref": "APT-0041",
+   "patient": "pt-0005",
+   "clinician": "cn-01",
+   "start": "2026-10-30T10:15:00-04:00",
+   "durationMinutes": 30,
+   "status": "Scheduled",
+   "lane": 1,
+   "overlaps": "apt-0040"
+  },
+  {
+   "id": "apt-0042",
+   "ref": "APT-0042",
+   "patient": "pt-0002",
+   "clinician": "cn-01",
+   "start": "2026-10-30T11:00:00-04:00",
+   "durationMinutes": 30,
+   "status": "Scheduled",
+   "lane": 0
+  },
+  {
+   "id": "apt-0043",
+   "ref": "APT-0043",
+   "patient": "pt-0007",
+   "clinician": "cn-01",
+   "start": "2026-10-30T11:30:00-04:00",
+   "durationMinutes": 45,
+   "status": "Scheduled",
+   "lane": 0
+  },
+  {
+   "id": "apt-0044",
+   "ref": "APT-0044",
+   "patient": "pt-0006",
+   "clinician": "cn-01",
+   "start": "2026-10-30T13:00:00-04:00",
+   "durationMinutes": 30,
+   "status": "Canceled",
+   "lane": 0
+  }
+ ],
+ "reminders": [
+  {
+   "id": "rm-0041",
+   "appointment": "apt-0041",
+   "channel": "email",
+   "to": "maria.santos@example.test",
+   "delivery": "Sent",
+   "sentAt": "2026-10-29T09:00:00-04:00"
+  },
+  {
+   "id": "rm-0042",
+   "appointment": "apt-0042",
+   "channel": "sms",
+   "to": "555-0142",
+   "delivery": "Scheduled",
+   "scheduledFor": "2026-10-30T08:00:00-04:00"
+  },
+  {
+   "id": "rm-0043",
+   "appointment": "apt-0043",
+   "channel": "sms",
+   "to": null,
+   "delivery": "Not sent",
+   "reason": "no phone number on file"
+  }
+ ],
+ "slots": [
+  {
+   "id": "sl-1112-0900",
+   "clinician": "cn-01",
+   "start": "2026-11-12T09:00:00-05:00",
+   "durationMinutes": 30,
+   "state": "available"
+  },
+  {
+   "id": "sl-1112-0930",
+   "clinician": "cn-01",
+   "start": "2026-11-12T09:30:00-05:00",
+   "durationMinutes": 30,
+   "state": "selected"
+  },
+  {
+   "id": "sl-1112-1000",
+   "clinician": "cn-01",
+   "start": "2026-11-12T10:00:00-05:00",
+   "durationMinutes": 30,
+   "state": "available"
+  },
+  {
+   "id": "sl-1112-1030",
+   "clinician": "cn-01",
+   "start": "2026-11-12T10:30:00-05:00",
+   "durationMinutes": 30,
+   "state": "unavailable"
+  },
+  {
+   "id": "sl-1112-1100",
+   "clinician": "cn-01",
+   "start": "2026-11-12T11:00:00-05:00",
+   "durationMinutes": 30,
+   "state": "available"
+  },
+  {
+   "id": "sl-1112-1130",
+   "clinician": "cn-01",
+   "start": "2026-11-12T11:30:00-05:00",
+   "durationMinutes": 30,
+   "state": "available"
+  },
+  {
+   "id": "sl-1112-1200",
+   "clinician": "cn-01",
+   "start": "2026-11-12T12:00:00-05:00",
+   "durationMinutes": 30,
+   "state": "available"
+  },
+  {
+   "id": "sl-1112-1230",
+   "clinician": "cn-01",
+   "start": "2026-11-12T12:30:00-05:00",
+   "durationMinutes": 30,
+   "state": "available"
+  },
+  {
+   "id": "sl-1112-1300",
+   "clinician": "cn-01",
+   "start": "2026-11-12T13:00:00-05:00",
+   "durationMinutes": 30,
+   "state": "available"
+  },
+  {
+   "id": "sl-1112-1330",
+   "clinician": "cn-01",
+   "start": "2026-11-12T13:30:00-05:00",
+   "durationMinutes": 30,
+   "state": "available"
+  },
+  {
+   "id": "sl-1112-1400",
+   "clinician": "cn-01",
+   "start": "2026-11-12T14:00:00-05:00",
+   "durationMinutes": 30,
+   "state": "available"
+  },
+  {
+   "id": "sl-1112-1430",
+   "clinician": "cn-01",
+   "start": "2026-11-12T14:30:00-05:00",
+   "durationMinutes": 30,
+   "state": "available"
+  }
+ ],
+ "slotPicture": {
+  "clinician": "cn-01",
+  "date": "2026-11-12",
+  "weekday": "Thursday",
+  "timeZone": "est",
+  "rescheduling": "apt-0042"
+ },
+ "arabicDigitsExample": "الخطوة ٢ من ٤"
+}

@@ -1,0 +1,6230 @@
+{
+ "about": "Clinicly is a fictional brand. Every clinic, clinician, patient, appointment, visit, visit note and reminder in this file is invented, and no name is meant to be a real person. Ids are stable and are never reused or renumbered; every id from the direction round (cl-01, cn-01 to cn-03, pt-0001 to pt-0008, apt-0038 to apt-0044, rm-0041 to rm-0043, sl-1112-*) keeps its meaning. Times are fixed sample times, not live data. Contact addresses use example.test and phone numbers are 555-01xx. The pictures in the Clinicly brand book are drawn from this file; they are illustrations, not evidence that any product is accessible. FableBook maps each case to a Scenario and each flow to a Journey and keeps the original ids.",
+ "version": 1,
+ "display": {
+  "sampleToday": {
+   "date": "2026-10-30",
+   "weekday": "Friday",
+   "time": "09:35",
+   "utcOffset": "-04:00",
+   "clinicId": "cl-01",
+   "note": "The sample time is 9:35 AM (the direction round showed 9:05 AM; it moved so that the 9:00 AM appointment apt-0038, which is Completed, has ended). Clocks go back at 2:00 AM on Sunday 2026-11-01 (EDT to EST), so the local time 1:00 to 2:00 AM happens twice that day."
+  },
+  "time": "A time is shown in the clinic's own time zone, as written in the start value (the offset in the string is that clinic's offset on that date). The zone is named once per screen, and abbreviated (EDT, EST, CDT) beside any time that could be read two ways, or when the viewer's zone differs from the clinic's.",
+  "en": "12-hour time with AM or PM, abbreviated weekday and month (Fri, Oct 30), Western digits.",
+  "ar": "24-hour time, the day and month in Arabic words, Western digits as the default. Arabic-Indic digits appear once, as a labeled example. Latin names, references such as APT-0042 and times are isolated left-to-right runs inside the right-to-left line.",
+  "duration": "A duration is whole minutes, shown as \"30 min\".",
+  "missing": "A missing value is absent or null in this file, never an empty string. The screen shows a short plain phrase for it (for example \"No phone number\"), never a blank.",
+  "names": "Matching display names are told apart by the patient identifier (CLY- and six digits).",
+  "flows": "A flow step names the case on screen when the person acts (caseId), the action, what the person sees as a result (expected), the values on that screen (changing) and the values right after the action (outcome). The next step's screen shows those outcome values. A choice or typed text is already part of the screen it was made on, so the chosen time is marked on the screen where it was chosen. A step that only reads has an empty outcome."
+ },
+ "clinics": [
+  {
+   "id": "cl-01",
+   "name": "Harbor Street Clinic",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "cl-02",
+   "name": "Lakeside Clinic",
+   "timeZone": "America/Chicago"
+  }
+ ],
+ "clinicians": [
+  {
+   "id": "cn-01",
+   "name": "Ana Reyes",
+   "initials": "AR",
+   "clinicId": "cl-01",
+   "focus": "Family care"
+  },
+  {
+   "id": "cn-02",
+   "name": "Tomas Ferreira",
+   "initials": "TF",
+   "clinicId": "cl-01"
+  },
+  {
+   "id": "cn-03",
+   "name": "Christopher Alexander Montgomery-Whitfield",
+   "initials": "CM",
+   "clinicId": "cl-01",
+   "focus": "Evening clinic"
+  },
+  {
+   "id": "cn-04",
+   "name": "Mei Lin Okoye",
+   "initials": "MO",
+   "clinicId": "cl-02",
+   "focus": null
+  }
+ ],
+ "patients": [
+  {
+   "id": "pt-0001",
+   "name": "Jo Marsh",
+   "initials": "JM",
+   "avatar": null,
+   "identifier": "CLY-482901",
+   "phone": "555-0101",
+   "email": "jo.marsh@example.test",
+   "language": "en"
+  },
+  {
+   "id": "pt-0002",
+   "name": "ليلى حداد",
+   "initials": "ل",
+   "avatar": null,
+   "latin": "Layla Haddad",
+   "identifier": "CLY-482902",
+   "phone": "555-0142",
+   "language": "ar"
+  },
+  {
+   "id": "pt-0003",
+   "name": "Walter Brandt",
+   "initials": "WB",
+   "avatar": null,
+   "identifier": "CLY-482903",
+   "phone": "555-0103",
+   "email": "walter.brandt@example.test",
+   "language": "en"
+  },
+  {
+   "id": "pt-0004",
+   "name": "Maria Santos",
+   "initials": "MS",
+   "avatar": null,
+   "identifier": "CLY-482917",
+   "phone": "555-0104",
+   "language": "en"
+  },
+  {
+   "id": "pt-0005",
+   "name": "Maria Santos",
+   "initials": "MS",
+   "avatar": null,
+   "identifier": "CLY-482930",
+   "email": "maria.santos@example.test",
+   "language": "en"
+  },
+  {
+   "id": "pt-0006",
+   "name": "أحمد المنصوري",
+   "initials": "أ",
+   "avatar": null,
+   "latin": "Ahmad Al-Mansouri",
+   "identifier": "CLY-482906",
+   "phone": "555-0106",
+   "language": "ar"
+  },
+  {
+   "id": "pt-0007",
+   "name": "Alexandria Konstantinopolous-Papadimitriou",
+   "initials": "AK",
+   "avatar": null,
+   "identifier": "CLY-482907",
+   "language": "en"
+  },
+  {
+   "id": "pt-0008",
+   "name": "نورا العبيدي",
+   "initials": "ن",
+   "avatar": null,
+   "latin": "Noura Al-Obaidi",
+   "identifier": "CLY-482908",
+   "language": "ar"
+  },
+  {
+   "id": "pt-0009",
+   "name": "Imani Clarke",
+   "initials": "IC",
+   "avatar": null,
+   "identifier": "CLY-482909",
+   "phone": "555-0109",
+   "language": "en"
+  },
+  {
+   "id": "pt-0010",
+   "name": "Pavel Novak",
+   "initials": "PN",
+   "avatar": null,
+   "identifier": "CLY-482910",
+   "phone": "555-0110",
+   "email": "pavel.novak@example.test",
+   "language": "en"
+  },
+  {
+   "id": "pt-0011",
+   "name": "Hye-jin Park",
+   "initials": "HP",
+   "avatar": null,
+   "identifier": "CLY-482911",
+   "phone": "555-0111",
+   "language": "en"
+  },
+  {
+   "id": "pt-0012",
+   "name": "Sofia Lindgren",
+   "initials": "SL",
+   "avatar": null,
+   "identifier": "CLY-482912",
+   "email": "sofia.lindgren@example.test",
+   "language": "en"
+  },
+  {
+   "id": "pt-0013",
+   "name": "Daniel Okafor",
+   "initials": "DO",
+   "avatar": null,
+   "identifier": "CLY-482913",
+   "phone": "555-0113",
+   "language": "en"
+  },
+  {
+   "id": "pt-0014",
+   "name": "Rosa Delgado",
+   "initials": "RD",
+   "avatar": null,
+   "identifier": "CLY-482914",
+   "phone": "555-0145",
+   "language": "en"
+  }
+ ],
+ "appointments": [
+  {
+   "id": "apt-0038",
+   "ref": "APT-0038",
+   "patientId": "pt-0001",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-10-30T09:00:00-04:00",
+   "durationMinutes": 30,
+   "status": "Completed",
+   "lane": 0
+  },
+  {
+   "id": "apt-0040",
+   "ref": "APT-0040",
+   "patientId": "pt-0004",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-10-30T10:00:00-04:00",
+   "durationMinutes": 45,
+   "status": "Missed",
+   "lane": 0
+  },
+  {
+   "id": "apt-0041",
+   "ref": "APT-0041",
+   "patientId": "pt-0005",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-10-30T10:15:00-04:00",
+   "durationMinutes": 30,
+   "status": "Scheduled",
+   "lane": 1,
+   "overlapsId": "apt-0040"
+  },
+  {
+   "id": "apt-0042",
+   "ref": "APT-0042",
+   "patientId": "pt-0002",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-10-30T11:00:00-04:00",
+   "durationMinutes": 30,
+   "status": "Scheduled",
+   "lane": 0
+  },
+  {
+   "id": "apt-0043",
+   "ref": "APT-0043",
+   "patientId": "pt-0007",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-10-30T11:30:00-04:00",
+   "durationMinutes": 45,
+   "status": "Scheduled",
+   "lane": 0
+  },
+  {
+   "id": "apt-0044",
+   "ref": "APT-0044",
+   "patientId": "pt-0006",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-10-30T13:00:00-04:00",
+   "durationMinutes": 30,
+   "status": "Canceled",
+   "lane": 0
+  },
+  {
+   "id": "apt-0045",
+   "ref": "APT-0045",
+   "patientId": "pt-0003",
+   "clinicianId": "cn-02",
+   "clinicId": "cl-01",
+   "start": "2026-10-30T14:00:00-04:00",
+   "durationMinutes": 30,
+   "status": "Scheduled",
+   "reason": "Follow-up"
+  },
+  {
+   "id": "apt-0046",
+   "ref": "APT-0046",
+   "patientId": "pt-0007",
+   "clinicianId": "cn-03",
+   "clinicId": "cl-01",
+   "start": "2026-10-30T16:30:00-04:00",
+   "durationMinutes": 45,
+   "status": "Scheduled",
+   "reason": "Annual check"
+  },
+  {
+   "id": "apt-0047",
+   "ref": "APT-0047",
+   "patientId": "pt-0008",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-10-30T14:30:00-04:00",
+   "durationMinutes": 30,
+   "status": "Scheduled"
+  },
+  {
+   "id": "apt-0048",
+   "ref": "APT-0048",
+   "patientId": "pt-0009",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-10-31T09:00:00-04:00",
+   "durationMinutes": 30,
+   "status": "Scheduled",
+   "reason": "New patient visit"
+  },
+  {
+   "id": "apt-0049",
+   "ref": "APT-0049",
+   "patientId": "pt-0010",
+   "clinicianId": "cn-02",
+   "clinicId": "cl-01",
+   "start": "2026-11-01T01:30:00-04:00",
+   "durationMinutes": 30,
+   "status": "Scheduled",
+   "reason": "Early call"
+  },
+  {
+   "id": "apt-0050",
+   "ref": "APT-0050",
+   "patientId": "pt-0011",
+   "clinicianId": "cn-02",
+   "clinicId": "cl-01",
+   "start": "2026-11-01T01:30:00-05:00",
+   "durationMinutes": 30,
+   "status": "Scheduled",
+   "reason": "Early call"
+  },
+  {
+   "id": "apt-0051",
+   "ref": "APT-0051",
+   "patientId": "pt-0012",
+   "clinicianId": "cn-03",
+   "clinicId": "cl-01",
+   "start": "2026-11-06T23:45:00-05:00",
+   "durationMinutes": 45,
+   "status": "Scheduled",
+   "reason": "Late call"
+  },
+  {
+   "id": "apt-0052",
+   "ref": "APT-0052",
+   "patientId": "pt-0013",
+   "clinicianId": "cn-04",
+   "clinicId": "cl-02",
+   "start": "2026-10-30T09:00:00-05:00",
+   "durationMinutes": 30,
+   "status": "Scheduled",
+   "reason": "Follow-up"
+  },
+  {
+   "id": "apt-0053",
+   "ref": "APT-0053",
+   "patientId": "pt-0001",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-09-18T09:30:00-04:00",
+   "durationMinutes": 30,
+   "status": "Completed"
+  },
+  {
+   "id": "apt-0054",
+   "ref": "APT-0054",
+   "patientId": "pt-0001",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-07-10T09:30:00-04:00",
+   "durationMinutes": 30,
+   "status": "Completed"
+  },
+  {
+   "id": "apt-0055",
+   "ref": "APT-0055",
+   "patientId": "pt-0003",
+   "clinicianId": "cn-02",
+   "clinicId": "cl-01",
+   "start": "2026-10-23T09:30:00-04:00",
+   "durationMinutes": 30,
+   "status": "Completed"
+  },
+  {
+   "id": "apt-0056",
+   "ref": "APT-0056",
+   "patientId": "pt-0014",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-10-30T15:00:00-04:00",
+   "durationMinutes": 30,
+   "status": "Scheduled",
+   "reason": "Follow-up"
+  },
+  {
+   "id": "apt-0060",
+   "ref": "APT-0060",
+   "patientId": "pt-0001",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T09:30:00-05:00",
+   "durationMinutes": 30,
+   "status": "Scheduled",
+   "reason": "Follow-up",
+   "bookedFromSlotId": "sl-1112-0930"
+  },
+  {
+   "id": "apt-0061",
+   "ref": "APT-0061",
+   "patientId": "pt-0001",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T10:00:00-05:00",
+   "durationMinutes": 30,
+   "status": "Scheduled",
+   "reason": "Follow-up",
+   "bookedFromSlotId": "sl-1112-1000"
+  }
+ ],
+ "slots": [
+  {
+   "id": "sl-1112-0900",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T09:00:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1112-0930",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T09:30:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1112-1000",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T10:00:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1112-1030",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T10:30:00-05:00",
+   "durationMinutes": 30,
+   "availability": "taken"
+  },
+  {
+   "id": "sl-1112-1100",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T11:00:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1112-1130",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T11:30:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1112-1200",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T12:00:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1112-1230",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T12:30:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1112-1300",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T13:00:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1112-1330",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T13:30:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1112-1400",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T14:00:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1112-1430",
+   "clinicianId": "cn-01",
+   "clinicId": "cl-01",
+   "start": "2026-11-12T14:30:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1113-1000",
+   "clinicianId": "cn-02",
+   "clinicId": "cl-01",
+   "start": "2026-11-13T10:00:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1101-0130-edt",
+   "clinicianId": "cn-02",
+   "clinicId": "cl-01",
+   "start": "2026-11-01T01:30:00-04:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  },
+  {
+   "id": "sl-1101-0130-est",
+   "clinicianId": "cn-02",
+   "clinicId": "cl-01",
+   "start": "2026-11-01T01:30:00-05:00",
+   "durationMinutes": 30,
+   "availability": "open"
+  }
+ ],
+ "visits": [
+  {
+   "id": "v-0001",
+   "patientId": "pt-0001",
+   "clinicianId": "cn-01",
+   "appointmentId": "apt-0053",
+   "occurredAt": "2026-09-18T09:34:00-04:00",
+   "durationMinutes": 26
+  },
+  {
+   "id": "v-0002",
+   "patientId": "pt-0001",
+   "clinicianId": "cn-01",
+   "appointmentId": "apt-0054",
+   "occurredAt": "2026-07-10T09:31:00-04:00",
+   "durationMinutes": 29
+  },
+  {
+   "id": "v-0003",
+   "patientId": "pt-0001",
+   "clinicianId": "cn-01",
+   "appointmentId": "apt-0038",
+   "occurredAt": "2026-10-30T09:02:00-04:00",
+   "durationMinutes": 28
+  },
+  {
+   "id": "v-0004",
+   "patientId": "pt-0003",
+   "clinicianId": "cn-02",
+   "appointmentId": "apt-0055",
+   "occurredAt": "2026-10-23T09:33:00-04:00",
+   "durationMinutes": 27
+  },
+  {
+   "id": "v-0005",
+   "patientId": "pt-0004",
+   "clinicianId": "cn-01",
+   "appointmentId": null,
+   "occurredAt": "2026-02-06T10:00:00-05:00",
+   "durationMinutes": 30
+  },
+  {
+   "id": "v-0006",
+   "patientId": "pt-0004",
+   "clinicianId": "cn-01",
+   "appointmentId": null,
+   "occurredAt": "2026-03-07T10:00:00-05:00",
+   "durationMinutes": 30
+  },
+  {
+   "id": "v-0007",
+   "patientId": "pt-0004",
+   "clinicianId": "cn-01",
+   "appointmentId": null,
+   "occurredAt": "2026-04-08T10:00:00-04:00",
+   "durationMinutes": 30
+  },
+  {
+   "id": "v-0008",
+   "patientId": "pt-0004",
+   "clinicianId": "cn-01",
+   "appointmentId": null,
+   "occurredAt": "2026-05-01T10:00:00-04:00",
+   "durationMinutes": 30
+  },
+  {
+   "id": "v-0009",
+   "patientId": "pt-0004",
+   "clinicianId": "cn-01",
+   "appointmentId": null,
+   "occurredAt": "2026-06-02T10:00:00-04:00",
+   "durationMinutes": 30
+  },
+  {
+   "id": "v-0010",
+   "patientId": "pt-0004",
+   "clinicianId": "cn-01",
+   "appointmentId": null,
+   "occurredAt": "2026-07-03T10:00:00-04:00",
+   "durationMinutes": 30
+  },
+  {
+   "id": "v-0011",
+   "patientId": "pt-0004",
+   "clinicianId": "cn-01",
+   "appointmentId": null,
+   "occurredAt": "2026-08-04T10:00:00-04:00",
+   "durationMinutes": 30
+  },
+  {
+   "id": "v-0012",
+   "patientId": "pt-0004",
+   "clinicianId": "cn-01",
+   "appointmentId": null,
+   "occurredAt": "2026-09-05T10:00:00-04:00",
+   "durationMinutes": 30
+  }
+ ],
+ "visitNotes": [
+  {
+   "id": "vn-0001",
+   "visitId": "v-0001",
+   "authorId": "cn-01",
+   "writtenAt": "2026-09-18T10:05:00-04:00",
+   "text": "Routine check. No concerns raised. Patient asked about booking the next visit in the fall."
+  },
+  {
+   "id": "vn-0002",
+   "visitId": "v-0002",
+   "authorId": "cn-01",
+   "writtenAt": "2026-07-10T10:02:00-04:00",
+   "text": "Talked about the new work schedule and regular meals. Patient will bring a list of questions next time."
+  },
+  {
+   "id": "vn-0003",
+   "visitId": "v-0003",
+   "authorId": "cn-01",
+   "writtenAt": "2026-10-30T09:32:00-04:00",
+   "text": "Follow-up after the September visit. Patient reports things are steady. Next visit to be booked online."
+  },
+  {
+   "id": "vn-0004",
+   "visitId": "v-0004",
+   "authorId": "cn-02",
+   "writtenAt": "2026-10-23T10:10:00-04:00",
+   "text": "Short visit. Paperwork reviewed and filed. Nothing further needed today."
+  },
+  {
+   "id": "vn-0005",
+   "visitId": "v-0005",
+   "authorId": "cn-01",
+   "writtenAt": "2026-02-06T10:40:00-05:00",
+   "text": "First visit in this clinic. Went over the family contact details, the usual pharmacy and the preferred way to be reached. Patient said mornings work best for appointments and that a text message is the easiest reminder. We talked about how the clinic keeps records, who can read them and how to ask for a copy. Patient had questions about the online booking page and how to move an appointment. They were shown where Reschedule is. Patient agreed to bring any earlier paperwork to the next visit and to say so if anything on file is out of date."
+  }
+ ],
+ "reminders": [
+  {
+   "id": "rm-0041",
+   "appointmentId": "apt-0041",
+   "channel": "email",
+   "to": "maria.santos@example.test",
+   "status": "Sent",
+   "sentAt": "2026-10-29T09:00:00-04:00",
+   "text": "Reminder: your appointment with Ana Reyes is on Fri, Oct 30 at 10:15 AM EDT at Harbor Street Clinic. To change it, call the clinic."
+  },
+  {
+   "id": "rm-0042",
+   "appointmentId": "apt-0042",
+   "channel": "sms",
+   "to": "555-0142",
+   "status": "Scheduled",
+   "scheduledFor": "2026-10-30T10:00:00-04:00",
+   "text": "Reminder: your appointment with Ana Reyes is today at 11:00 AM EDT at Harbor Street Clinic. To change it, call the clinic."
+  },
+  {
+   "id": "rm-0043",
+   "appointmentId": "apt-0043",
+   "channel": "sms",
+   "to": null,
+   "status": "Not sent",
+   "reason": "no-contact",
+   "text": "Reminder: your appointment with Ana Reyes is today at 11:30 AM EDT at Harbor Street Clinic. To change it, call the clinic."
+  },
+  {
+   "id": "rm-0044",
+   "appointmentId": "apt-0056",
+   "channel": "sms",
+   "to": "555-0145",
+   "status": "Not sent",
+   "reason": "send-failed",
+   "text": "Reminder: your appointment with Ana Reyes is today at 3:00 PM EDT at Harbor Street Clinic. To change it, call the clinic."
+  },
+  {
+   "id": "rm-0045",
+   "appointmentId": "apt-0045",
+   "channel": "email",
+   "to": "walter.brandt@example.test",
+   "status": "Sent",
+   "sentAt": "2026-10-29T09:00:00-04:00",
+   "text": "Reminder: your appointment with Tomas Ferreira is today at 2:00 PM EDT at Harbor Street Clinic. To change it, call the clinic."
+  }
+ ],
+ "roles": [
+  {
+   "id": "r-01",
+   "name": "Front desk coordinator",
+   "staffId": "st-01"
+  },
+  {
+   "id": "r-02",
+   "name": "Clinician",
+   "staffId": "st-02"
+  },
+  {
+   "id": "r-03",
+   "name": "Clinic manager",
+   "staffId": "st-03"
+  },
+  {
+   "id": "r-04",
+   "name": "Read-only",
+   "staffId": "st-04"
+  }
+ ],
+ "staff": [
+  {
+   "id": "st-01",
+   "name": "Maribel Okafor",
+   "initials": "MO",
+   "roleId": "r-01"
+  },
+  {
+   "id": "st-02",
+   "name": "Ana Reyes",
+   "initials": "AR",
+   "roleId": "r-02",
+   "clinicianId": "cn-01"
+  },
+  {
+   "id": "st-03",
+   "name": "Priya Raman",
+   "initials": "PR",
+   "roleId": "r-03"
+  },
+  {
+   "id": "st-04",
+   "name": "Sam Lindqvist",
+   "initials": "SL",
+   "roleId": "r-04"
+  }
+ ],
+ "permissions": [
+  {
+   "roleId": "r-01",
+   "screen": "day",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-01",
+   "screen": "patients",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-01",
+   "screen": "patient-details",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-01",
+   "screen": "book",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-01",
+   "screen": "reminders",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-01",
+   "screen": "visit-notes",
+   "outcome": "denied",
+   "says": "Visit notes are not available to your role. Ask the clinic manager if you need them."
+  },
+  {
+   "roleId": "r-02",
+   "screen": "day",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-02",
+   "screen": "patients",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-02",
+   "screen": "patient-details",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-02",
+   "screen": "book",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-02",
+   "screen": "reminders",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-02",
+   "screen": "visit-notes",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-03",
+   "screen": "day",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-03",
+   "screen": "patients",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-03",
+   "screen": "patient-details",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-03",
+   "screen": "book",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-03",
+   "screen": "reminders",
+   "outcome": "allowed"
+  },
+  {
+   "roleId": "r-03",
+   "screen": "visit-notes",
+   "outcome": "read-only"
+  },
+  {
+   "roleId": "r-04",
+   "screen": "day",
+   "outcome": "read-only"
+  },
+  {
+   "roleId": "r-04",
+   "screen": "book",
+   "outcome": "denied",
+   "says": "You do not have access to booking."
+  },
+  {
+   "roleId": "r-04",
+   "screen": "patients",
+   "outcome": "denied",
+   "says": "You do not have access to patients."
+  },
+  {
+   "roleId": "r-04",
+   "screen": "patient-details",
+   "outcome": "denied",
+   "says": "You do not have access to patient details."
+  },
+  {
+   "roleId": "r-04",
+   "screen": "reminders",
+   "outcome": "denied",
+   "says": "You do not have access to reminders."
+  },
+  {
+   "roleId": "r-04",
+   "screen": "visit-notes",
+   "outcome": "denied",
+   "says": "You do not have access to visit notes."
+  }
+ ],
+ "jobs": [
+  {
+   "id": "job-book",
+   "words": "Help me find a time that is really free, book it, and trust that it is booked."
+  },
+  {
+   "id": "job-next",
+   "words": "I just need to know who is next."
+  },
+  {
+   "id": "job-order",
+   "words": "Please do not mix up the order of the date."
+  },
+  {
+   "id": "job-day",
+   "words": "Show me the whole day, and who is overlapping."
+  },
+  {
+   "id": "job-note",
+   "words": "Let me write the visit note without losing a word."
+  },
+  {
+   "id": "job-remind",
+   "words": "Tell me which reminders did not go out."
+  }
+ ],
+ "personas": [
+  {
+   "id": "ps-01",
+   "who": "Jo Marsh, 34, patient",
+   "patientId": "pt-0001",
+   "jobId": "job-book"
+  },
+  {
+   "id": "ps-02",
+   "who": "Sam Lindqvist, volunteer at the front door",
+   "staffId": "st-04",
+   "jobId": "job-next"
+  },
+  {
+   "id": "ps-03",
+   "who": "Layla Haddad, patient who reads Arabic",
+   "patientId": "pt-0002",
+   "jobId": "job-order"
+  },
+  {
+   "id": "ps-04",
+   "who": "Maribel Okafor, front desk coordinator",
+   "staffId": "st-01",
+   "jobId": "job-day"
+  },
+  {
+   "id": "ps-05",
+   "who": "Ana Reyes, clinician",
+   "staffId": "st-02",
+   "jobId": "job-note"
+  },
+  {
+   "id": "ps-06",
+   "who": "Priya Raman, clinic manager",
+   "staffId": "st-03",
+   "jobId": "job-remind"
+  }
+ ],
+ "copy": {
+  "day-empty": "No appointments today. Book appointment to add one.",
+  "day-loading": "Loading the day",
+  "day-unavailable": "The day could not load. Try again.",
+  "day-stale": "Showing the day as of 9:02 AM. Updating.",
+  "offline": "Offline. Changes save when you are back.",
+  "reconnecting": "Reconnecting. Getting the connection back.",
+  "slots-none": "No times are open on this day. Pick another day.",
+  "slots-one": "One time is open on this day.",
+  "slot-lost": "That time was just taken. Pick another time.",
+  "validation-phone": "Enter a phone number with 10 digits, like 555-0101.",
+  "submit-failed": "The appointment was not booked. Your details are still here. Try again.",
+  "confirmed": "Your appointment is booked.",
+  "patients-empty": "No patients yet.",
+  "patients-none": "No patients match your search.",
+  "patients-loading": "Loading patients",
+  "patients-unavailable": "Patients could not load. Try again.",
+  "no-visits": "No visits yet.",
+  "note-unsaved": "Unsaved changes",
+  "note-saving": "Saving",
+  "note-failed": "The note was not saved. Your text is still here. Try again.",
+  "note-saved": "Note saved.",
+  "read-only": "Read-only",
+  "reminders-none": "No reminders for this day.",
+  "reminder-no-contact": "Not sent: no phone number on file.",
+  "reminder-failed": "Not sent: the message did not go out. Try again.",
+  "reminders-loading": "Loading reminders",
+  "no-phone": "No phone number",
+  "no-email": "No email address",
+  "focus-hint": "Arrow keys move between times. Enter picks one.",
+  "ar-title-appointments": {
+   "arabic": "title-appointments"
+  },
+  "ar-title-slot-step": {
+   "arabic": "title-slot-step"
+  },
+  "ar-validation": {
+   "arabic": "validation"
+  },
+  "ar-slot-lost": {
+   "arabic": "slot-lost"
+  },
+  "ar-save-failed": {
+   "arabic": "save-failed"
+  },
+  "ar-reminder-sent": {
+   "arabic": "reminder-sent"
+  },
+  "ar-step": {
+   "arabic": "step"
+  },
+  "ar-mixed-ref": {
+   "arabic": "mixed-ref"
+  },
+  "ar-mixed-when": {
+   "arabic": "mixed-when"
+  },
+  "ar-digits-indic": {
+   "arabic": "digits-indic"
+  }
+ },
+ "cases": [
+  {
+   "id": "case-day-empty",
+   "surface": "day",
+   "title": "The day with no appointments",
+   "description": "Maribel opens the day for a clinician with nothing booked.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-02",
+    "clinicianIds": [
+     "cn-04"
+    ],
+    "patientIds": [],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-04",
+    "listState": "empty"
+   },
+   "copy": [
+    "day-empty"
+   ],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-day-one",
+   "surface": "day",
+   "title": "One appointment",
+   "description": "One appointment for the whole day.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-02"
+    ],
+    "patientIds": [
+     "pt-0003"
+    ],
+    "appointmentIds": [
+     "apt-0045"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-02",
+    "listState": "loaded"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-day-busy",
+   "surface": "day",
+   "title": "A busy day",
+   "description": "Seven appointments between 9 AM and 3 PM, one canceled and one missed.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001",
+     "pt-0004",
+     "pt-0005",
+     "pt-0002",
+     "pt-0007",
+     "pt-0006",
+     "pt-0008"
+    ],
+    "appointmentIds": [
+     "apt-0038",
+     "apt-0040",
+     "apt-0041",
+     "apt-0042",
+     "apt-0043",
+     "apt-0044",
+     "apt-0047"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-01",
+    "listState": "loaded"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-day-overlap",
+   "surface": "day",
+   "title": "Overlapping appointments",
+   "description": "Two appointments overlap and sit side by side, never stacked over each other.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0004",
+     "pt-0005"
+    ],
+    "appointmentIds": [
+     "apt-0040",
+     "apt-0041"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-01",
+    "listState": "loaded"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-day-long-names",
+   "surface": "day",
+   "title": "Long clinician and patient names",
+   "description": "A clinician with a very long name and a patient with a very long name.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-03"
+    ],
+    "patientIds": [
+     "pt-0007"
+    ],
+    "appointmentIds": [
+     "apt-0046"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-03",
+    "listState": "loaded"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-day-missing-details",
+   "surface": "day",
+   "title": "Missing optional details",
+   "description": "An appointment with no reason and a patient with no phone number or email.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0008"
+    ],
+    "appointmentIds": [
+     "apt-0047"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-01",
+    "listState": "loaded"
+   },
+   "copy": [
+    "no-phone",
+    "no-email"
+   ],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-day-loading",
+   "surface": "day",
+   "title": "The day is loading",
+   "description": "The rows are placeholders and the page says it is loading.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": true,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-01",
+    "listState": "loading"
+   },
+   "copy": [
+    "day-loading"
+   ],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-day-unavailable",
+   "surface": "day",
+   "title": "The day could not load",
+   "description": "The day failed to load and offers Try again.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-01",
+    "listState": "unavailable"
+   },
+   "copy": [
+    "day-unavailable"
+   ],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-day-stale",
+   "surface": "day",
+   "title": "Data that is a little old",
+   "description": "The day shows the last copy and says it is updating.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001",
+     "pt-0004",
+     "pt-0002"
+    ],
+    "appointmentIds": [
+     "apt-0038",
+     "apt-0040",
+     "apt-0042"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-01",
+    "listState": "stale"
+   },
+   "copy": [
+    "day-stale"
+   ],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-day-date-change",
+   "surface": "day",
+   "title": "The date changes",
+   "description": "Maribel moves from Friday, Oct 30 to Saturday, Oct 31.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0009"
+    ],
+    "appointmentIds": [
+     "apt-0048"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-31",
+    "clinicianId": "cn-01",
+    "listState": "loaded",
+    "fromDate": "2026-10-30"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-day-time-zones",
+   "surface": "day",
+   "title": "A clinic in another time zone",
+   "description": "Jo is in Eastern time and looks at Lakeside Clinic, which keeps Central time; each time is shown in the clinic's zone with the viewer's time beside it.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-02",
+    "clinicianIds": [
+     "cn-04"
+    ],
+    "patientIds": [
+     "pt-0013"
+    ],
+    "appointmentIds": [
+     "apt-0052"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-04",
+    "listState": "loaded",
+    "viewerTimeZone": "America/New_York"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-day-midnight",
+   "surface": "day",
+   "title": "An appointment that crosses midnight",
+   "description": "A late call starts at 11:45 PM on Friday, Nov 6 and ends at 12:30 AM on Saturday, Nov 7.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-03"
+    ],
+    "patientIds": [
+     "pt-0012"
+    ],
+    "appointmentIds": [
+     "apt-0051"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-11-06",
+    "clinicianId": "cn-03",
+    "listState": "loaded"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-day-repeated-hour",
+   "surface": "day",
+   "title": "A repeated local time",
+   "description": "On Sunday, Nov 1 the local time 1:30 AM happens twice; the two appointments name EDT and EST.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-02"
+    ],
+    "patientIds": [
+     "pt-0010",
+     "pt-0011"
+    ],
+    "appointmentIds": [
+     "apt-0049",
+     "apt-0050"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-11-01",
+    "clinicianId": "cn-02",
+    "listState": "loaded"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-book-clinician",
+   "surface": "book",
+   "title": "Step 1: choose a clinician",
+   "description": "Jo picks the clinician she wants.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01",
+     "cn-02",
+     "cn-03"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 1,
+    "clinicianId": null,
+    "date": "2026-11-12",
+    "selectedSlotId": null,
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-date",
+   "surface": "book",
+   "title": "Step 2: choose a date",
+   "description": "Jo picks Thursday, Nov 12.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 2,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": null,
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-slots-many",
+   "surface": "book",
+   "title": "Step 3: many open times",
+   "description": "Twelve times for Thursday, Nov 12; one is taken and one is selected.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130",
+     "sl-1112-1200",
+     "sl-1112-1230",
+     "sl-1112-1300",
+     "sl-1112-1330",
+     "sl-1112-1400",
+     "sl-1112-1430"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-slots-one",
+   "surface": "book",
+   "title": "Step 3: one open time",
+   "description": "Only one time is open on Friday, Nov 13.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-02"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1113-1000"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-02",
+    "date": "2026-11-13",
+    "selectedSlotId": null,
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [
+    "slots-one"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-slots-none",
+   "surface": "book",
+   "title": "Step 3: no open times",
+   "description": "No times are open on Saturday, Nov 14.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-02"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-02",
+    "date": "2026-11-14",
+    "selectedSlotId": null,
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [
+    "slots-none"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-review",
+   "surface": "book",
+   "title": "Step 4: review",
+   "description": "The review shows the clinician, the time with its zone, and the reference APT-0061.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0930"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-validation",
+   "surface": "book",
+   "title": "A field with an error",
+   "description": "The phone number has too few digits; focus is on that field, the error says what to do, and nothing typed is lost.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0930"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": true
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": [
+     "phone"
+    ],
+    "phoneDraft": "555-01",
+    "focus": "phone"
+   },
+   "copy": [
+    "validation-phone"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-submitting",
+   "surface": "book",
+   "title": "Booking in progress",
+   "description": "The button says Booking and cannot be pressed twice; the details stay on screen.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0930"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "submitting",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-failure",
+   "surface": "book",
+   "title": "Booking failed, input kept",
+   "description": "The request failed. The details are still there and Try again is offered.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0930"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "failed",
+    "fieldErrors": [],
+    "phoneDraft": "555-0101"
+   },
+   "copy": [
+    "submit-failed"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-slot-lost",
+   "surface": "book",
+   "title": "The selected time was just taken",
+   "description": "Another person booked 9:30 AM first; the time shows as taken and nothing else changes.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130",
+     "sl-1112-1200",
+     "sl-1112-1230",
+     "sl-1112-1300",
+     "sl-1112-1330",
+     "sl-1112-1400",
+     "sl-1112-1430"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": null,
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "failed",
+    "fieldErrors": [],
+    "takenSlotId": "sl-1112-0930"
+   },
+   "copy": [
+    "slot-lost"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-review-reselected",
+   "surface": "book",
+   "title": "Step 4: review, a new time",
+   "description": "Jo picked 10:00 AM; the reference is still APT-0061.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-1000"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-1000",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-submitting-reselected",
+   "surface": "book",
+   "title": "Booking in progress, new time",
+   "description": "The request for 10:00 AM is sent; the reference is still APT-0061.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-1000"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-1000",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "submitting",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-confirmed",
+   "surface": "book",
+   "title": "Booked",
+   "description": "The appointment APT-0061 is Scheduled for 10:00 AM.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [
+     "apt-0061"
+    ],
+    "slotIds": [
+     "sl-1112-1000"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": "confirmed",
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-1000",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": "Scheduled",
+    "submit": "succeeded",
+    "fieldErrors": []
+   },
+   "copy": [
+    "confirmed"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-confirmed-first",
+   "surface": "book",
+   "title": "Booked at the first try",
+   "description": "The appointment APT-0060 is Scheduled for 9:30 AM.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [
+     "apt-0060"
+    ],
+    "slotIds": [
+     "sl-1112-0930"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": "confirmed",
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0060",
+    "appointmentStatus": "Scheduled",
+    "submit": "succeeded",
+    "fieldErrors": []
+   },
+   "copy": [
+    "confirmed"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-review-first",
+   "surface": "book",
+   "title": "Step 4: review, first try",
+   "description": "The review for the booking that succeeds at the first try.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0930"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0060",
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-submitting-first",
+   "surface": "book",
+   "title": "Booking in progress, first try",
+   "description": "The booking that succeeds at the first try, while it is sent.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0930"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0060",
+    "appointmentStatus": null,
+    "submit": "submitting",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-slots-first",
+   "surface": "book",
+   "title": "Step 3: the time is selected",
+   "description": "Jo selected 9:30 AM in the booking that succeeds at the first try.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130",
+     "sl-1112-1200",
+     "sl-1112-1230",
+     "sl-1112-1300",
+     "sl-1112-1330",
+     "sl-1112-1400",
+     "sl-1112-1430"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0060",
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-slots-reselect",
+   "surface": "book",
+   "title": "Step 3: picking another time",
+   "description": "After 9:30 AM was taken, Jo selects 10:00 AM.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130",
+     "sl-1112-1200",
+     "sl-1112-1230",
+     "sl-1112-1300",
+     "sl-1112-1330",
+     "sl-1112-1400",
+     "sl-1112-1430"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-1000",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": [],
+    "takenSlotId": "sl-1112-0930"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-slots-lost-first",
+   "surface": "book",
+   "title": "Step 3: the time is selected, then lost",
+   "description": "Jo selected 9:30 AM in the booking where it is taken.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130",
+     "sl-1112-1200",
+     "sl-1112-1230",
+     "sl-1112-1300",
+     "sl-1112-1330",
+     "sl-1112-1400",
+     "sl-1112-1430"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-submitting-lost",
+   "surface": "book",
+   "title": "Booking in progress, then lost",
+   "description": "The request for 9:30 AM is sent.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0930"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "submitting",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-book-dst-repeated",
+   "surface": "book",
+   "title": "A repeated local time in the slots",
+   "description": "Sunday, Nov 1 has two 1:30 AM times, EDT and EST; each is its own slot.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-02"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1101-0130-edt",
+     "sl-1101-0130-est"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-02",
+    "date": "2026-11-01",
+    "selectedSlotId": null,
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patients-empty",
+   "surface": "patients",
+   "title": "No patients yet",
+   "description": "A new clinic with no patients.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-02",
+    "clinicianIds": [],
+    "patientIds": [],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "listState": "empty",
+    "query": null,
+    "permission": "allowed"
+   },
+   "copy": [
+    "patients-empty"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patients-one",
+   "surface": "patients",
+   "title": "One patient",
+   "description": "One patient in the list.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "listState": "loaded",
+    "query": null,
+    "permission": "allowed"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patients-many",
+   "surface": "patients",
+   "title": "Many patients",
+   "description": "Fourteen patients, sorted by name.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0001",
+     "pt-0002",
+     "pt-0003",
+     "pt-0004",
+     "pt-0005",
+     "pt-0006",
+     "pt-0007",
+     "pt-0008",
+     "pt-0009",
+     "pt-0010",
+     "pt-0011",
+     "pt-0012",
+     "pt-0013",
+     "pt-0014"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "listState": "loaded",
+    "query": null,
+    "permission": "allowed"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patients-no-results",
+   "surface": "patients",
+   "title": "A search with no results",
+   "description": "The search finds no one and says so.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "listState": "no-results",
+    "query": "Okonkwo",
+    "permission": "allowed"
+   },
+   "copy": [
+    "patients-none"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patients-duplicates",
+   "surface": "patients",
+   "title": "Two patients with the same name",
+   "description": "Two Maria Santos, told apart by their identifiers.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0004",
+     "pt-0005"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "listState": "loaded",
+    "query": "Maria",
+    "permission": "allowed"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patients-long-names",
+   "surface": "patients",
+   "title": "Long names",
+   "description": "A very long name wraps to two lines and is never cut off.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0007",
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "listState": "loaded",
+    "query": null,
+    "permission": "allowed"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patients-no-avatar",
+   "surface": "patients",
+   "title": "No picture, only initials",
+   "description": "Nobody has a picture; every row shows initials.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0001",
+     "pt-0003",
+     "pt-0009"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "listState": "loaded",
+    "query": null,
+    "permission": "allowed"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patients-loading",
+   "surface": "patients",
+   "title": "Patients are loading",
+   "description": "Placeholder rows and a loading line.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": true,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "listState": "loading",
+    "query": null,
+    "permission": "allowed"
+   },
+   "copy": [
+    "patients-loading"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patients-unavailable",
+   "surface": "patients",
+   "title": "Patients could not load",
+   "description": "An error line with Try again.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "listState": "unavailable",
+    "query": null,
+    "permission": "allowed"
+   },
+   "copy": [
+    "patients-unavailable"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patients-denied",
+   "surface": "patients",
+   "title": "No access to patients",
+   "description": "Sam has the read-only role; the screen says so and shows no patient names.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-04"
+   },
+   "personaId": "ps-02",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "listState": "denied",
+    "query": null,
+    "permission": "denied"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patient-no-visits",
+   "surface": "patient",
+   "title": "A patient with no visits",
+   "description": "Ahmad has no visits yet.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-02"
+   },
+   "personaId": "ps-05",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0006"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "patientId": "pt-0006",
+    "permission": "allowed",
+    "noteDraft": null,
+    "noteSave": "none"
+   },
+   "copy": [
+    "no-visits"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patient-one-visit",
+   "surface": "patient",
+   "title": "One visit",
+   "description": "Walter has one visit with one note.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-02"
+   },
+   "personaId": "ps-05",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-02"
+    ],
+    "patientIds": [
+     "pt-0003"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [
+     "v-0004"
+    ],
+    "noteIds": [
+     "vn-0004"
+    ],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "patientId": "pt-0003",
+    "permission": "allowed",
+    "noteDraft": null,
+    "noteSave": "none"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patient-many-visits",
+   "surface": "patient",
+   "title": "Many visits",
+   "description": "Maria has eight visits.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-02"
+   },
+   "personaId": "ps-05",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0004"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [
+     "v-0005",
+     "v-0006",
+     "v-0007",
+     "v-0008",
+     "v-0009",
+     "v-0010",
+     "v-0011",
+     "v-0012"
+    ],
+    "noteIds": [
+     "vn-0005"
+    ],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "patientId": "pt-0004",
+    "permission": "allowed",
+    "noteDraft": null,
+    "noteSave": "none"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patient-missing-info",
+   "surface": "patient",
+   "title": "Optional details are missing",
+   "description": "Noura has no phone number and no email address; the screen says so in words.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-02"
+   },
+   "personaId": "ps-05",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0008"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "patientId": "pt-0008",
+    "permission": "allowed",
+    "noteDraft": null,
+    "noteSave": "none"
+   },
+   "copy": [
+    "no-phone",
+    "no-email",
+    "no-visits"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patient-long-note",
+   "surface": "patient",
+   "title": "A long visit note",
+   "description": "The note is long and wraps; the editor grows with it.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-02"
+   },
+   "personaId": "ps-05",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0004"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [
+     "v-0005"
+    ],
+    "noteIds": [
+     "vn-0005"
+    ],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "patientId": "pt-0004",
+    "permission": "allowed",
+    "noteDraft": null,
+    "noteSave": "none",
+    "openNoteId": "vn-0005"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patient-read-only",
+   "surface": "patient",
+   "title": "A note opened read-only",
+   "description": "Priya opens a note written by Ana; it shows the word Read-only and has no Save note button.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-03"
+   },
+   "personaId": "ps-06",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [
+     "v-0003"
+    ],
+    "noteIds": [
+     "vn-0003"
+    ],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "patientId": "pt-0001",
+    "permission": "read-only",
+    "noteDraft": null,
+    "noteSave": "none",
+    "openNoteId": "vn-0003"
+   },
+   "copy": [
+    "read-only"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patient-unsaved",
+   "surface": "patient",
+   "title": "Unsaved changes",
+   "description": "Ana has typed more; the note says Unsaved changes and Save note is ready.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-02"
+   },
+   "personaId": "ps-05",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [
+     "v-0003"
+    ],
+    "noteIds": [
+     "vn-0003"
+    ],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "patientId": "pt-0001",
+    "permission": "allowed",
+    "noteDraft": "Follow-up after the September visit. Patient reports things are steady. Next visit to be booked online. Asked about the Thursday morning times.",
+    "noteSave": "unsaved",
+    "openNoteId": "vn-0003"
+   },
+   "copy": [
+    "note-unsaved"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patient-saving",
+   "surface": "patient",
+   "title": "Saving",
+   "description": "Save note was pressed; the note says Saving and the text stays.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-02"
+   },
+   "personaId": "ps-05",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [
+     "v-0003"
+    ],
+    "noteIds": [
+     "vn-0003"
+    ],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "patientId": "pt-0001",
+    "permission": "allowed",
+    "noteDraft": "Follow-up after the September visit. Patient reports things are steady. Next visit to be booked online. Asked about the Thursday morning times.",
+    "noteSave": "saving",
+    "openNoteId": "vn-0003"
+   },
+   "copy": [
+    "note-saving"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patient-save-failed",
+   "surface": "patient",
+   "title": "The note did not save",
+   "description": "The save failed; the text is kept and Try again is offered.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-02"
+   },
+   "personaId": "ps-05",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [
+     "v-0003"
+    ],
+    "noteIds": [
+     "vn-0003"
+    ],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "patientId": "pt-0001",
+    "permission": "allowed",
+    "noteDraft": "Follow-up after the September visit. Patient reports things are steady. Next visit to be booked online. Asked about the Thursday morning times.",
+    "noteSave": "failed",
+    "openNoteId": "vn-0003"
+   },
+   "copy": [
+    "note-failed"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patient-saved",
+   "surface": "patient",
+   "title": "Saved",
+   "description": "The retry worked; the note says Note saved and the screen reader hears it.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-02"
+   },
+   "personaId": "ps-05",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [
+     "v-0003"
+    ],
+    "noteIds": [
+     "vn-0003"
+    ],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "patientId": "pt-0001",
+    "permission": "allowed",
+    "noteDraft": "Follow-up after the September visit. Patient reports things are steady. Next visit to be booked online. Asked about the Thursday morning times.",
+    "noteSave": "saved",
+    "openNoteId": "vn-0003",
+    "announce": "Note saved."
+   },
+   "copy": [
+    "note-saved"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-patient-denied",
+   "surface": "patient",
+   "title": "Visit notes are not available",
+   "description": "Maribel tries to open a visit note; the screen names what cannot be opened and shows no patient details.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "patientId": null,
+    "permission": "denied",
+    "noteDraft": null,
+    "noteSave": "none",
+    "screen": "visit-notes"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-reminders-none",
+   "surface": "reminders",
+   "title": "No reminders",
+   "description": "No reminders for the day.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-02",
+    "clinicianIds": [
+     "cn-04"
+    ],
+    "patientIds": [],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "listState": "empty"
+   },
+   "copy": [
+    "reminders-none"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-reminders-one",
+   "surface": "reminders",
+   "title": "One reminder",
+   "description": "One reminder, already sent.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0003"
+    ],
+    "appointmentIds": [
+     "apt-0045"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": [
+     "rm-0045"
+    ]
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "listState": "loaded"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-reminders-many",
+   "surface": "reminders",
+   "title": "Many reminders",
+   "description": "All five reminders for the day, in the three statuses.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0005",
+     "pt-0002",
+     "pt-0007",
+     "pt-0014",
+     "pt-0003"
+    ],
+    "appointmentIds": [
+     "apt-0041",
+     "apt-0042",
+     "apt-0043",
+     "apt-0056",
+     "apt-0045"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": [
+     "rm-0041",
+     "rm-0042",
+     "rm-0043",
+     "rm-0044",
+     "rm-0045"
+    ]
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "listState": "loaded"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 450
+   }
+  },
+  {
+   "id": "case-reminders-no-contact",
+   "surface": "reminders",
+   "title": "No contact method",
+   "description": "The patient has no phone number, so the reminder is Not sent and says why.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0007"
+    ],
+    "appointmentIds": [
+     "apt-0043"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": [
+     "rm-0043"
+    ]
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "listState": "loaded"
+   },
+   "copy": [
+    "reminder-no-contact"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-reminders-loading",
+   "surface": "reminders",
+   "title": "Reminders are loading",
+   "description": "Placeholder rows and a loading line.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": true,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "listState": "loading"
+   },
+   "copy": [
+    "reminders-loading"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-reminders-send-failed",
+   "surface": "reminders",
+   "title": "Sending failed",
+   "description": "The message did not go out; the reminder says Not sent and offers Try again.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-03"
+   },
+   "personaId": "ps-06",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0014"
+    ],
+    "appointmentIds": [
+     "apt-0056"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": [
+     "rm-0044"
+    ]
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "listState": "loaded",
+    "reminderStatus": {
+     "rm-0044": "Not sent"
+    }
+   },
+   "copy": [
+    "reminder-failed"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-reminders-retry-sending",
+   "surface": "reminders",
+   "title": "Trying again",
+   "description": "Try again was pressed; the reminder shows Scheduled while it is queued.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-03"
+   },
+   "personaId": "ps-06",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0014"
+    ],
+    "appointmentIds": [
+     "apt-0056"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": [
+     "rm-0044"
+    ]
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "listState": "loaded",
+    "reminderStatus": {
+     "rm-0044": "Scheduled"
+    }
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-reminders-retry-sent",
+   "surface": "reminders",
+   "title": "Sent after trying again",
+   "description": "The second try worked and the reminder says Sent.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-03"
+   },
+   "personaId": "ps-06",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0014"
+    ],
+    "appointmentIds": [
+     "apt-0056"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": [
+     "rm-0044"
+    ]
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "listState": "loaded",
+    "reminderStatus": {
+     "rm-0044": "Sent"
+    }
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-combo-light-ltr",
+   "surface": "book",
+   "title": "The booking card in light, left to right",
+   "description": "The same booking card with only the color scheme and the reading direction changed.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 300
+   }
+  },
+  {
+   "id": "case-combo-dark-ltr",
+   "surface": "book",
+   "title": "The booking card in dark, left to right",
+   "description": "The same booking card with only the color scheme and the reading direction changed.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "dark",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 300
+   }
+  },
+  {
+   "id": "case-combo-light-rtl",
+   "surface": "book",
+   "title": "The booking card in light, right to left",
+   "description": "The same booking card with only the color scheme and the reading direction changed.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0002"
+   },
+   "personaId": "ps-03",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0002"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "ar",
+   "direction": "rtl",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [
+    "ar-title-slot-step",
+    "ar-step"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 300
+   }
+  },
+  {
+   "id": "case-combo-dark-rtl",
+   "surface": "book",
+   "title": "The booking card in dark, right to left",
+   "description": "The same booking card with only the color scheme and the reading direction changed.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0002"
+   },
+   "personaId": "ps-03",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0002"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "ar",
+   "direction": "rtl",
+   "scheme": "dark",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [
+    "ar-title-slot-step",
+    "ar-step"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 300
+   }
+  },
+  {
+   "id": "case-focus-keyboard",
+   "surface": "book",
+   "title": "Visible keyboard focus",
+   "description": "Focus sits on a time; arrow keys move between times and Enter picks one; the focus ring is 2 px and at least 3:1.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130",
+     "sl-1112-1200",
+     "sl-1112-1230",
+     "sl-1112-1300",
+     "sl-1112-1330",
+     "sl-1112-1400",
+     "sl-1112-1430"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": true
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": [],
+    "focus": "slot:sl-1112-1000"
+   },
+   "copy": [
+    "focus-hint"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-focus-error",
+   "surface": "book",
+   "title": "Focus moves to the first error",
+   "description": "After Book appointment with a bad phone number, focus moves to the phone field and the error is joined to it.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0930"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": true
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": [
+     "phone"
+    ],
+    "phoneDraft": "555-01",
+    "focus": "phone"
+   },
+   "copy": [
+    "validation-phone"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-viewport-phone",
+   "surface": "day",
+   "title": "The day on a phone",
+   "description": "The day as a list on a 390 px wide screen.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001",
+     "pt-0004",
+     "pt-0005",
+     "pt-0002"
+    ],
+    "appointmentIds": [
+     "apt-0038",
+     "apt-0040",
+     "apt-0041",
+     "apt-0042"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-01",
+    "listState": "loaded"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-viewport-desktop",
+   "surface": "day",
+   "title": "The day on a desktop",
+   "description": "The day as lanes on a 1024 px wide screen.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001",
+     "pt-0004",
+     "pt-0005",
+     "pt-0002",
+     "pt-0007"
+    ],
+    "appointmentIds": [
+     "apt-0038",
+     "apt-0040",
+     "apt-0041",
+     "apt-0042",
+     "apt-0043"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "desktop",
+    "width": 1024,
+    "height": 768,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-01",
+    "listState": "loaded"
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.6,
+    "height": 360
+   }
+  },
+  {
+   "id": "case-text-200",
+   "surface": "book",
+   "title": "Text at 200 percent",
+   "description": "The slot step with text enlarged to 200 percent on a phone; times wrap to two columns and nothing is cut off.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 2
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 460
+   }
+  },
+  {
+   "id": "case-reflow-320",
+   "surface": "book",
+   "title": "Reflow at 320 px",
+   "description": "The review at 320 px wide: one column, no sideways scrolling.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0930"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 320,
+    "height": 640,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.84,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-reduced-motion",
+   "surface": "book",
+   "title": "Reduced motion",
+   "description": "With reduced motion set, Booking shows a still word and no spinner; the confirmation appears without sliding.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0001"
+   },
+   "personaId": "ps-01",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0930"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": true,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "submitting",
+    "fieldErrors": []
+   },
+   "copy": [],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-offline",
+   "surface": "day",
+   "title": "Offline",
+   "description": "The day stays readable from the last copy and says changes save when the connection is back.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001",
+     "pt-0004",
+     "pt-0002"
+    ],
+    "appointmentIds": [
+     "apt-0038",
+     "apt-0040",
+     "apt-0042"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "offline",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-01",
+    "listState": "loaded"
+   },
+   "copy": [
+    "offline"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-reconnecting",
+   "surface": "day",
+   "title": "Reconnecting",
+   "description": "The connection is coming back; the day says so.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-01"
+   },
+   "personaId": "ps-04",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001",
+     "pt-0004",
+     "pt-0002"
+    ],
+    "appointmentIds": [
+     "apt-0038",
+     "apt-0040",
+     "apt-0042"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "reconnecting",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-01",
+    "listState": "loaded"
+   },
+   "copy": [
+    "reconnecting"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-announce-save",
+   "surface": "patient",
+   "title": "The save is announced",
+   "description": "When the note saves, a polite live region says Note saved; the visible line says the same.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-02"
+   },
+   "personaId": "ps-05",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0001"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [
+     "v-0003"
+    ],
+    "noteIds": [
+     "vn-0003"
+    ],
+    "reminderIds": []
+   },
+   "language": "en",
+   "direction": "ltr",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": true
+   },
+   "changing": {
+    "patientId": "pt-0001",
+    "permission": "allowed",
+    "noteDraft": null,
+    "noteSave": "saved",
+    "openNoteId": "vn-0003",
+    "announce": "Note saved."
+   },
+   "copy": [
+    "note-saved"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-ar-appointments",
+   "surface": "day",
+   "title": "Appointments in Arabic",
+   "description": "Layla reads her upcoming appointment; the reference APT-0042 and the clinician's Latin name stay in order.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0002"
+   },
+   "personaId": "ps-03",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0002"
+    ],
+    "appointmentIds": [
+     "apt-0042"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "ar",
+   "direction": "rtl",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "clinicianId": "cn-01",
+    "listState": "loaded"
+   },
+   "copy": [
+    "ar-title-appointments",
+    "ar-mixed-ref",
+    "ar-mixed-when"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-ar-slots",
+   "surface": "book",
+   "title": "The slot step in Arabic",
+   "description": "The time step, right to left, with the step count and the back and next chevrons mirrored.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0002"
+   },
+   "personaId": "ps-03",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0002"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "ar",
+   "direction": "rtl",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [
+    "ar-title-slot-step",
+    "ar-step"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-ar-digits-indic",
+   "surface": "book",
+   "title": "Arabic-Indic digits, once",
+   "description": "The step count written with Arabic-Indic digits, beside the same count in Western digits; the book shows this once, labeled.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0002"
+   },
+   "personaId": "ps-03",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0002"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "ar",
+   "direction": "rtl",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 2,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": null,
+    "bookingRef": null,
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": []
+   },
+   "copy": [
+    "ar-digits-indic",
+    "ar-step"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 300
+   }
+  },
+  {
+   "id": "case-ar-validation",
+   "surface": "book",
+   "title": "A field error in Arabic",
+   "description": "The error text sits under the field and reads right to left.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0002"
+   },
+   "personaId": "ps-03",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0002"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0930"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "ar",
+   "direction": "rtl",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 4,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": "sl-1112-0930",
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "idle",
+    "fieldErrors": [
+     "phone"
+    ],
+    "phoneDraft": "555-01",
+    "focus": "phone"
+   },
+   "copy": [
+    "ar-validation"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-ar-slot-lost",
+   "surface": "book",
+   "title": "A time that was just taken, in Arabic",
+   "description": "The same notice as the English one.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0002"
+   },
+   "personaId": "ps-03",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0002"
+    ],
+    "appointmentIds": [],
+    "slotIds": [
+     "sl-1112-0900",
+     "sl-1112-0930",
+     "sl-1112-1000",
+     "sl-1112-1030",
+     "sl-1112-1100",
+     "sl-1112-1130"
+    ],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "ar",
+   "direction": "rtl",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "step": 3,
+    "clinicianId": "cn-01",
+    "date": "2026-11-12",
+    "selectedSlotId": null,
+    "bookingRef": "APT-0061",
+    "appointmentStatus": null,
+    "submit": "failed",
+    "fieldErrors": [],
+    "takenSlotId": "sl-1112-0930"
+   },
+   "copy": [
+    "ar-slot-lost"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-ar-save-failed",
+   "surface": "patient",
+   "title": "A note that did not save, in Arabic",
+   "description": "The failure line and the kept text, right to left.",
+   "actor": {
+    "kind": "staff",
+    "id": "st-02"
+   },
+   "personaId": "ps-05",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [
+     "cn-01"
+    ],
+    "patientIds": [
+     "pt-0002"
+    ],
+    "appointmentIds": [],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": []
+   },
+   "language": "ar",
+   "direction": "rtl",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "patientId": "pt-0002",
+    "permission": "allowed",
+    "noteDraft": "Follow-up after the September visit.",
+    "noteSave": "failed"
+   },
+   "copy": [
+    "ar-save-failed"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  },
+  {
+   "id": "case-ar-reminder",
+   "surface": "reminders",
+   "title": "A reminder in Arabic",
+   "description": "The reminder Sent line in Arabic with the sent time.",
+   "actor": {
+    "kind": "patient",
+    "id": "pt-0002"
+   },
+   "personaId": "ps-03",
+   "records": {
+    "clinicId": "cl-01",
+    "clinicianIds": [],
+    "patientIds": [
+     "pt-0005"
+    ],
+    "appointmentIds": [
+     "apt-0041"
+    ],
+    "slotIds": [],
+    "visitIds": [],
+    "noteIds": [],
+    "reminderIds": [
+     "rm-0041"
+    ]
+   },
+   "language": "ar",
+   "direction": "rtl",
+   "scheme": "light",
+   "viewport": {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "textZoom": 1
+   },
+   "simulation": {
+    "network": "online",
+    "loading": false,
+    "reducedMotion": false,
+    "keyboard": false
+   },
+   "changing": {
+    "date": "2026-10-30",
+    "listState": "loaded"
+   },
+   "copy": [
+    "ar-reminder-sent"
+   ],
+   "illustration": {
+    "scale": 0.72,
+    "height": 430
+   }
+  }
+ ],
+ "flows": [
+  {
+   "id": "flow-book-success",
+   "title": "Booking an appointment",
+   "personaId": "ps-01",
+   "appointmentId": "apt-0060",
+   "bookingRef": "APT-0060",
+   "steps": [
+    {
+     "order": 1,
+     "caseId": "case-book-clinician",
+     "action": {
+      "kind": "choose",
+      "label": "Ana Reyes"
+     },
+     "expected": "The date step opens with Ana Reyes chosen.",
+     "changing": {
+      "step": 1
+     },
+     "outcome": {
+      "clinicianId": "cn-01",
+      "step": 2
+     }
+    },
+    {
+     "order": 2,
+     "caseId": "case-book-date",
+     "action": {
+      "kind": "choose",
+      "label": "Thursday, Nov 12"
+     },
+     "expected": "The open times for that day appear.",
+     "changing": {
+      "step": 2,
+      "date": "2026-11-12"
+     },
+     "outcome": {
+      "step": 3
+     }
+    },
+    {
+     "order": 3,
+     "caseId": "case-book-slots-first",
+     "action": {
+      "kind": "choose",
+      "label": "9:30 AM"
+     },
+     "expected": "The time is marked and the review opens.",
+     "changing": {
+      "step": 3,
+      "selectedSlotId": "sl-1112-0930"
+     },
+     "outcome": {
+      "step": 4,
+      "selectedSlotId": "sl-1112-0930"
+     }
+    },
+    {
+     "order": 4,
+     "caseId": "case-book-review-first",
+     "action": {
+      "kind": "press",
+      "label": "Book appointment"
+     },
+     "expected": "The button says Booking while the request is sent.",
+     "changing": {
+      "step": 4,
+      "bookingRef": "APT-0060",
+      "submit": "idle"
+     },
+     "outcome": {
+      "submit": "submitting"
+     }
+    },
+    {
+     "order": 5,
+     "caseId": "case-book-submitting-first",
+     "action": {
+      "kind": "wait"
+     },
+     "expected": "The answer comes back and the appointment is booked.",
+     "changing": {
+      "submit": "submitting",
+      "bookingRef": "APT-0060"
+     },
+     "outcome": {
+      "submit": "succeeded",
+      "step": "confirmed",
+      "appointmentStatus": "Scheduled"
+     }
+    },
+    {
+     "order": 6,
+     "caseId": "case-book-confirmed-first",
+     "action": {
+      "kind": "read",
+      "label": "the confirmation"
+     },
+     "expected": "The appointment APT-0060 is Scheduled for 9:30 AM.",
+     "changing": {
+      "step": "confirmed",
+      "appointmentStatus": "Scheduled",
+      "bookingRef": "APT-0060"
+     },
+     "outcome": {}
+    }
+   ]
+  },
+  {
+   "id": "flow-book-slot-lost",
+   "title": "The time was taken before confirming",
+   "personaId": "ps-01",
+   "appointmentId": "apt-0061",
+   "bookingRef": "APT-0061",
+   "steps": [
+    {
+     "order": 1,
+     "caseId": "case-book-slots-lost-first",
+     "action": {
+      "kind": "choose",
+      "label": "9:30 AM"
+     },
+     "expected": "The time is marked and the review opens.",
+     "changing": {
+      "step": 3,
+      "selectedSlotId": "sl-1112-0930",
+      "bookingRef": "APT-0061"
+     },
+     "outcome": {
+      "step": 4,
+      "selectedSlotId": "sl-1112-0930"
+     }
+    },
+    {
+     "order": 2,
+     "caseId": "case-book-review",
+     "action": {
+      "kind": "press",
+      "label": "Book appointment"
+     },
+     "expected": "The button says Booking while the request for 9:30 AM is sent.",
+     "changing": {
+      "step": 4,
+      "selectedSlotId": "sl-1112-0930",
+      "bookingRef": "APT-0061",
+      "submit": "idle"
+     },
+     "outcome": {
+      "submit": "submitting"
+     }
+    },
+    {
+     "order": 3,
+     "caseId": "case-book-submitting-lost",
+     "action": {
+      "kind": "wait"
+     },
+     "expected": "The answer comes back: that time was just taken.",
+     "changing": {
+      "submit": "submitting",
+      "bookingRef": "APT-0061"
+     },
+     "outcome": {
+      "submit": "failed",
+      "step": 3,
+      "selectedSlotId": null,
+      "takenSlotId": "sl-1112-0930"
+     }
+    },
+    {
+     "order": 4,
+     "caseId": "case-book-slot-lost",
+     "action": {
+      "kind": "read",
+      "label": "the notice"
+     },
+     "expected": "The page says that time was just taken, shows 9:30 AM as taken and keeps the other details.",
+     "changing": {
+      "step": 3,
+      "selectedSlotId": null,
+      "takenSlotId": "sl-1112-0930",
+      "bookingRef": "APT-0061",
+      "submit": "failed"
+     },
+     "outcome": {}
+    },
+    {
+     "order": 5,
+     "caseId": "case-book-slots-reselect",
+     "action": {
+      "kind": "choose",
+      "label": "10:00 AM"
+     },
+     "expected": "The new time is marked and the review opens.",
+     "changing": {
+      "selectedSlotId": "sl-1112-1000",
+      "bookingRef": "APT-0061"
+     },
+     "outcome": {
+      "step": 4,
+      "selectedSlotId": "sl-1112-1000"
+     }
+    },
+    {
+     "order": 6,
+     "caseId": "case-book-review-reselected",
+     "action": {
+      "kind": "press",
+      "label": "Book appointment"
+     },
+     "expected": "The button says Booking while the request for 10:00 AM is sent. The reference is the same.",
+     "changing": {
+      "step": 4,
+      "selectedSlotId": "sl-1112-1000",
+      "bookingRef": "APT-0061",
+      "submit": "idle"
+     },
+     "outcome": {
+      "submit": "submitting"
+     }
+    },
+    {
+     "order": 7,
+     "caseId": "case-book-submitting-reselected",
+     "action": {
+      "kind": "wait"
+     },
+     "expected": "The answer comes back and the appointment is booked.",
+     "changing": {
+      "submit": "submitting",
+      "bookingRef": "APT-0061"
+     },
+     "outcome": {
+      "submit": "succeeded",
+      "step": "confirmed",
+      "appointmentStatus": "Scheduled"
+     }
+    },
+    {
+     "order": 8,
+     "caseId": "case-book-confirmed",
+     "action": {
+      "kind": "read",
+      "label": "the confirmation"
+     },
+     "expected": "APT-0061 is Scheduled for 10:00 AM.",
+     "changing": {
+      "step": "confirmed",
+      "appointmentStatus": "Scheduled",
+      "bookingRef": "APT-0061"
+     },
+     "outcome": {}
+    }
+   ]
+  },
+  {
+   "id": "flow-note-save-retry",
+   "title": "A visit note that did not save",
+   "personaId": "ps-05",
+   "visitNoteId": "vn-0003",
+   "patientId": "pt-0001",
+   "steps": [
+    {
+     "order": 1,
+     "caseId": "case-patient-unsaved",
+     "action": {
+      "kind": "type",
+      "label": "the note"
+     },
+     "expected": "The note says Unsaved changes.",
+     "changing": {
+      "noteSave": "unsaved"
+     },
+     "outcome": {
+      "noteSave": "unsaved"
+     }
+    },
+    {
+     "order": 2,
+     "caseId": "case-patient-unsaved",
+     "action": {
+      "kind": "press",
+      "label": "Save note"
+     },
+     "expected": "The note says Saving and keeps the text.",
+     "changing": {
+      "noteSave": "unsaved"
+     },
+     "outcome": {
+      "noteSave": "saving"
+     }
+    },
+    {
+     "order": 3,
+     "caseId": "case-patient-saving",
+     "action": {
+      "kind": "wait"
+     },
+     "expected": "The save fails: the page says the note was not saved, keeps the text and offers Try again.",
+     "changing": {
+      "noteSave": "saving"
+     },
+     "outcome": {
+      "noteSave": "failed"
+     }
+    },
+    {
+     "order": 4,
+     "caseId": "case-patient-save-failed",
+     "action": {
+      "kind": "press",
+      "label": "Try again"
+     },
+     "expected": "The note says Saving again with the same text.",
+     "changing": {
+      "noteSave": "failed"
+     },
+     "outcome": {
+      "noteSave": "saving"
+     }
+    },
+    {
+     "order": 5,
+     "caseId": "case-patient-saving",
+     "action": {
+      "kind": "wait"
+     },
+     "expected": "The note says Note saved and the live region announces it.",
+     "changing": {
+      "noteSave": "saving"
+     },
+     "outcome": {
+      "noteSave": "saved",
+      "announce": "Note saved."
+     }
+    },
+    {
+     "order": 6,
+     "caseId": "case-patient-saved",
+     "action": {
+      "kind": "read",
+      "label": "the note"
+     },
+     "expected": "The note stays saved with the same text.",
+     "changing": {
+      "noteSave": "saved",
+      "announce": "Note saved."
+     },
+     "outcome": {}
+    }
+   ]
+  },
+  {
+   "id": "flow-reminder-retry",
+   "title": "A reminder that did not go out",
+   "personaId": "ps-06",
+   "reminderId": "rm-0044",
+   "steps": [
+    {
+     "order": 1,
+     "caseId": "case-reminders-send-failed",
+     "action": {
+      "kind": "read",
+      "label": "the list"
+     },
+     "expected": "The reminder says Not sent and offers Try again.",
+     "changing": {
+      "reminderStatus": {
+       "rm-0044": "Not sent"
+      }
+     },
+     "outcome": {}
+    },
+    {
+     "order": 2,
+     "caseId": "case-reminders-send-failed",
+     "action": {
+      "kind": "press",
+      "label": "Try again"
+     },
+     "expected": "The reminder shows Scheduled while it is queued.",
+     "changing": {
+      "reminderStatus": {
+       "rm-0044": "Not sent"
+      }
+     },
+     "outcome": {
+      "reminderStatus": {
+       "rm-0044": "Scheduled"
+      }
+     }
+    },
+    {
+     "order": 3,
+     "caseId": "case-reminders-retry-sending",
+     "action": {
+      "kind": "wait"
+     },
+     "expected": "The reminder says Sent.",
+     "changing": {
+      "reminderStatus": {
+       "rm-0044": "Scheduled"
+      }
+     },
+     "outcome": {
+      "reminderStatus": {
+       "rm-0044": "Sent"
+      }
+     }
+    },
+    {
+     "order": 4,
+     "caseId": "case-reminders-retry-sent",
+     "action": {
+      "kind": "read",
+      "label": "the list"
+     },
+     "expected": "The list shows the reminder as Sent.",
+     "changing": {
+      "reminderStatus": {
+       "rm-0044": "Sent"
+      }
+     },
+     "outcome": {}
+    }
+   ]
+  }
+ ]
+}

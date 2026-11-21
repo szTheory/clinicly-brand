@@ -1,0 +1,1073 @@
+{
+  "note": "Written by lettering/fonts.mjs. Subsets are regenerated from the pinned sources; run with --verify to compare. Hashes are of the bytes the page embeds.",
+  "source": {
+    "repo": "https://github.com/google/fonts",
+    "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+    "rawBase": "https://raw.githubusercontent.com/google/fonts/b68b528a75da7d9b73f3928899c07a23083a6633/"
+  },
+  "sampleText": {
+    "file": "lettering/samples-ar.txt",
+    "sha256": "aa98caf23a43f58b2501a5dc03730f40b4abfda153ff228566d74c3b1813f749",
+    "lines": 37,
+    "distinctNonAsciiCharacters": 55,
+    "characters": "،؛؟ءآأؤإئابةتثجحخدذرزسصطظعغـفقكلمنهوىيًٌَُِّْ٠١٢٣٤٥٦٧٨٩",
+    "inventory": [
+      {
+        "codepoint": "U+060C",
+        "character": "،",
+        "name": "ARABIC COMMA"
+      },
+      {
+        "codepoint": "U+061B",
+        "character": "؛",
+        "name": "ARABIC SEMICOLON"
+      },
+      {
+        "codepoint": "U+061F",
+        "character": "؟",
+        "name": "ARABIC QUESTION MARK"
+      },
+      {
+        "codepoint": "U+0621",
+        "character": "ء",
+        "name": "ARABIC LETTER HAMZA"
+      },
+      {
+        "codepoint": "U+0622",
+        "character": "آ",
+        "name": "ARABIC LETTER ALEF WITH MADDA ABOVE"
+      },
+      {
+        "codepoint": "U+0623",
+        "character": "أ",
+        "name": "ARABIC LETTER ALEF WITH HAMZA ABOVE"
+      },
+      {
+        "codepoint": "U+0624",
+        "character": "ؤ",
+        "name": "ARABIC LETTER WAW WITH HAMZA ABOVE"
+      },
+      {
+        "codepoint": "U+0625",
+        "character": "إ",
+        "name": "ARABIC LETTER ALEF WITH HAMZA BELOW"
+      },
+      {
+        "codepoint": "U+0626",
+        "character": "ئ",
+        "name": "ARABIC LETTER YEH WITH HAMZA ABOVE"
+      },
+      {
+        "codepoint": "U+0627",
+        "character": "ا",
+        "name": "ARABIC LETTER ALEF"
+      },
+      {
+        "codepoint": "U+0628",
+        "character": "ب",
+        "name": "ARABIC LETTER BEH"
+      },
+      {
+        "codepoint": "U+0629",
+        "character": "ة",
+        "name": "ARABIC LETTER TEH MARBUTA"
+      },
+      {
+        "codepoint": "U+062A",
+        "character": "ت",
+        "name": "ARABIC LETTER TEH"
+      },
+      {
+        "codepoint": "U+062B",
+        "character": "ث",
+        "name": "ARABIC LETTER THEH"
+      },
+      {
+        "codepoint": "U+062C",
+        "character": "ج",
+        "name": "ARABIC LETTER JEEM"
+      },
+      {
+        "codepoint": "U+062D",
+        "character": "ح",
+        "name": "ARABIC LETTER HAH"
+      },
+      {
+        "codepoint": "U+062E",
+        "character": "خ",
+        "name": "ARABIC LETTER KHAH"
+      },
+      {
+        "codepoint": "U+062F",
+        "character": "د",
+        "name": "ARABIC LETTER DAL"
+      },
+      {
+        "codepoint": "U+0630",
+        "character": "ذ",
+        "name": "ARABIC LETTER THAL"
+      },
+      {
+        "codepoint": "U+0631",
+        "character": "ر",
+        "name": "ARABIC LETTER REH"
+      },
+      {
+        "codepoint": "U+0632",
+        "character": "ز",
+        "name": "ARABIC LETTER ZAIN"
+      },
+      {
+        "codepoint": "U+0633",
+        "character": "س",
+        "name": "ARABIC LETTER SEEN"
+      },
+      {
+        "codepoint": "U+0635",
+        "character": "ص",
+        "name": "ARABIC LETTER SAD"
+      },
+      {
+        "codepoint": "U+0637",
+        "character": "ط",
+        "name": "ARABIC LETTER TAH"
+      },
+      {
+        "codepoint": "U+0638",
+        "character": "ظ",
+        "name": "ARABIC LETTER ZAH"
+      },
+      {
+        "codepoint": "U+0639",
+        "character": "ع",
+        "name": "ARABIC LETTER AIN"
+      },
+      {
+        "codepoint": "U+063A",
+        "character": "غ",
+        "name": "ARABIC LETTER GHAIN"
+      },
+      {
+        "codepoint": "U+0640",
+        "character": "ـ",
+        "name": "ARABIC TATWEEL"
+      },
+      {
+        "codepoint": "U+0641",
+        "character": "ف",
+        "name": "ARABIC LETTER FEH"
+      },
+      {
+        "codepoint": "U+0642",
+        "character": "ق",
+        "name": "ARABIC LETTER QAF"
+      },
+      {
+        "codepoint": "U+0643",
+        "character": "ك",
+        "name": "ARABIC LETTER KAF"
+      },
+      {
+        "codepoint": "U+0644",
+        "character": "ل",
+        "name": "ARABIC LETTER LAM"
+      },
+      {
+        "codepoint": "U+0645",
+        "character": "م",
+        "name": "ARABIC LETTER MEEM"
+      },
+      {
+        "codepoint": "U+0646",
+        "character": "ن",
+        "name": "ARABIC LETTER NOON"
+      },
+      {
+        "codepoint": "U+0647",
+        "character": "ه",
+        "name": "ARABIC LETTER HEH"
+      },
+      {
+        "codepoint": "U+0648",
+        "character": "و",
+        "name": "ARABIC LETTER WAW"
+      },
+      {
+        "codepoint": "U+0649",
+        "character": "ى",
+        "name": "ARABIC LETTER ALEF MAKSURA"
+      },
+      {
+        "codepoint": "U+064A",
+        "character": "ي",
+        "name": "ARABIC LETTER YEH"
+      },
+      {
+        "codepoint": "U+064B",
+        "character": "ً",
+        "name": "ARABIC FATHATAN"
+      },
+      {
+        "codepoint": "U+064C",
+        "character": "ٌ",
+        "name": "ARABIC DAMMATAN"
+      },
+      {
+        "codepoint": "U+064E",
+        "character": "َ",
+        "name": "ARABIC FATHA"
+      },
+      {
+        "codepoint": "U+064F",
+        "character": "ُ",
+        "name": "ARABIC DAMMA"
+      },
+      {
+        "codepoint": "U+0650",
+        "character": "ِ",
+        "name": "ARABIC KASRA"
+      },
+      {
+        "codepoint": "U+0651",
+        "character": "ّ",
+        "name": "ARABIC SHADDA"
+      },
+      {
+        "codepoint": "U+0652",
+        "character": "ْ",
+        "name": "ARABIC SUKUN"
+      },
+      {
+        "codepoint": "U+0660",
+        "character": "٠",
+        "name": "ARABIC-INDIC DIGIT ZERO"
+      },
+      {
+        "codepoint": "U+0661",
+        "character": "١",
+        "name": "ARABIC-INDIC DIGIT ONE"
+      },
+      {
+        "codepoint": "U+0662",
+        "character": "٢",
+        "name": "ARABIC-INDIC DIGIT TWO"
+      },
+      {
+        "codepoint": "U+0663",
+        "character": "٣",
+        "name": "ARABIC-INDIC DIGIT THREE"
+      },
+      {
+        "codepoint": "U+0664",
+        "character": "٤",
+        "name": "ARABIC-INDIC DIGIT FOUR"
+      },
+      {
+        "codepoint": "U+0665",
+        "character": "٥",
+        "name": "ARABIC-INDIC DIGIT FIVE"
+      },
+      {
+        "codepoint": "U+0666",
+        "character": "٦",
+        "name": "ARABIC-INDIC DIGIT SIX"
+      },
+      {
+        "codepoint": "U+0667",
+        "character": "٧",
+        "name": "ARABIC-INDIC DIGIT SEVEN"
+      },
+      {
+        "codepoint": "U+0668",
+        "character": "٨",
+        "name": "ARABIC-INDIC DIGIT EIGHT"
+      },
+      {
+        "codepoint": "U+0669",
+        "character": "٩",
+        "name": "ARABIC-INDIC DIGIT NINE"
+      }
+    ]
+  },
+  "arabic": {
+    "directions": {
+      "a": {
+        "family": "Noto Sans Arabic",
+        "key": "notosans",
+        "ids": [
+          "ar-notosans-400",
+          "ar-notosans-600"
+        ],
+        "totalWoff2Bytes": 20984,
+        "budgetBytes": 65536,
+        "bytesPerDistinctCharacterPerWeight": 190.8
+      },
+      "b": {
+        "family": "Rubik",
+        "key": "rubik",
+        "ids": [
+          "ar-rubik-400",
+          "ar-rubik-600"
+        ],
+        "totalWoff2Bytes": 31104,
+        "budgetBytes": 65536,
+        "bytesPerDistinctCharacterPerWeight": 282.8
+      }
+    },
+    "budgetBytesPerDirection": 65536,
+    "candidateBytesByWeight": {
+      "IBM Plex Sans Arabic": {
+        "400": 12180,
+        "600": 12724
+      },
+      "Noto Sans Arabic": {
+        "400": 10204,
+        "600": 10780
+      },
+      "Noto Kufi Arabic": {
+        "400": 7900,
+        "600": 8084
+      },
+      "Readex Pro": {
+        "400": 8820,
+        "600": 9412
+      },
+      "Vazirmatn": {
+        "400": 11964,
+        "600": 12432
+      },
+      "Alexandria": {
+        "400": 8732,
+        "600": 9276
+      },
+      "Rubik": {
+        "400": 15432,
+        "600": 15672
+      },
+      "Cairo": {
+        "400": 9236,
+        "600": 9636
+      }
+    },
+    "harfbuzz": "hb-shape (HarfBuzz) 14.2.0",
+    "nativeReaderReview": "none: Arabic wording is not reviewed by a native reader",
+    "fallbackRule": "If a glyph is missing from the subset or a direction exceeds the budget, the page shows a labeled system fallback instead of growing the subset."
+  },
+  "emoji": "Not used on this page.",
+  "faces": [
+    {
+      "id": "ar-plex-400",
+      "kind": "arabic",
+      "family": "IBM Plex Sans Arabic",
+      "css": "ClinArPlex",
+      "role": "Arabic usage examples",
+      "embed": false,
+      "axes": null,
+      "weight": 400,
+      "source": {
+        "path": "ofl/ibmplexsansarabic/IBMPlexSansArabic-Regular.ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 235924,
+        "sha256": "6f611412270a132bbac838da9259d4c68569b4175f3b3b8fa3fa36a30b56dab9"
+      },
+      "license": {
+        "path": "ofl/ibmplexsansarabic/OFL.txt",
+        "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-plex-400.woff2",
+        "bytes": 12180,
+        "sha256": "901372b43ce5b07fa6b1fabf8613ad16d20efebe6dbfbf45e63cb3129027e33c"
+      }
+    },
+    {
+      "id": "ar-plex-600",
+      "kind": "arabic",
+      "family": "IBM Plex Sans Arabic",
+      "css": "ClinArPlex",
+      "role": "Arabic usage examples",
+      "embed": false,
+      "axes": null,
+      "weight": 600,
+      "source": {
+        "path": "ofl/ibmplexsansarabic/IBMPlexSansArabic-SemiBold.ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 244616,
+        "sha256": "597bd5502e5997be4414e4c9c88834b30ff3784250c84f20bce2b20e53ebd467"
+      },
+      "license": {
+        "path": "ofl/ibmplexsansarabic/OFL.txt",
+        "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-plex-600.woff2",
+        "bytes": 12724,
+        "sha256": "c99048ef1e31fc5eb1360169f6cde91b9c412dbd22a94948c2a8f610677fd82e"
+      }
+    },
+    {
+      "id": "ar-notosans-400",
+      "kind": "arabic",
+      "family": "Noto Sans Arabic",
+      "css": "ClinArNotoSans",
+      "role": "Arabic usage examples",
+      "embed": true,
+      "axes": {
+        "wdth": 100,
+        "wght": 400
+      },
+      "weight": 400,
+      "source": {
+        "path": "ofl/notosansarabic/NotoSansArabic[wdth,wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 844676,
+        "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e"
+      },
+      "license": {
+        "path": "ofl/notosansarabic/OFL.txt",
+        "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-notosans-400.woff2",
+        "bytes": 10204,
+        "sha256": "55e44ac8f5070c8fccb46e2671e415eac8b9716948acd8d93dbb123e536ad152"
+      }
+    },
+    {
+      "id": "ar-notosans-600",
+      "kind": "arabic",
+      "family": "Noto Sans Arabic",
+      "css": "ClinArNotoSans",
+      "role": "Arabic usage examples",
+      "embed": true,
+      "axes": {
+        "wdth": 100,
+        "wght": 600
+      },
+      "weight": 600,
+      "source": {
+        "path": "ofl/notosansarabic/NotoSansArabic[wdth,wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 844676,
+        "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e"
+      },
+      "license": {
+        "path": "ofl/notosansarabic/OFL.txt",
+        "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-notosans-600.woff2",
+        "bytes": 10780,
+        "sha256": "526ac27780aa2c6fa19fb50ddf9f358aa9239ca98b2175a2c27df65b073c5937"
+      }
+    },
+    {
+      "id": "ar-kufi-400",
+      "kind": "arabic",
+      "family": "Noto Kufi Arabic",
+      "css": "ClinArKufi",
+      "role": "Arabic usage examples",
+      "embed": false,
+      "axes": {
+        "wght": 400
+      },
+      "weight": 400,
+      "source": {
+        "path": "ofl/notokufiarabic/NotoKufiArabic[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 434204,
+        "sha256": "494f6b61469d7a02a2d63f0fc4930bb007388d8cfe551de5eb98354e100889f3"
+      },
+      "license": {
+        "path": "ofl/notokufiarabic/OFL.txt",
+        "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-kufi-400.woff2",
+        "bytes": 7900,
+        "sha256": "81d2167d5aa05a0d75a0879fa89610a87de8be2df8c907eb0384eeb7b209ed82"
+      }
+    },
+    {
+      "id": "ar-kufi-600",
+      "kind": "arabic",
+      "family": "Noto Kufi Arabic",
+      "css": "ClinArKufi",
+      "role": "Arabic usage examples",
+      "embed": false,
+      "axes": {
+        "wght": 600
+      },
+      "weight": 600,
+      "source": {
+        "path": "ofl/notokufiarabic/NotoKufiArabic[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 434204,
+        "sha256": "494f6b61469d7a02a2d63f0fc4930bb007388d8cfe551de5eb98354e100889f3"
+      },
+      "license": {
+        "path": "ofl/notokufiarabic/OFL.txt",
+        "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-kufi-600.woff2",
+        "bytes": 8084,
+        "sha256": "99b0e44d5c80e2d21dd8e61784c9277529a44e5816ad3582e2c1ae289a31a8ba"
+      }
+    },
+    {
+      "id": "ar-readex-400",
+      "kind": "arabic",
+      "family": "Readex Pro",
+      "css": "ClinArReadex",
+      "role": "Arabic usage examples",
+      "embed": false,
+      "axes": {
+        "HEXP": 0,
+        "wght": 400
+      },
+      "weight": 400,
+      "source": {
+        "path": "ofl/readexpro/ReadexPro[HEXP,wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 278544,
+        "sha256": "268bba7e1e8f3b14d798b3fb0e40ebaa3fc39308c9ac0020e2faf6df181cc30e"
+      },
+      "license": {
+        "path": "ofl/readexpro/OFL.txt",
+        "sha256": "b41267a3903a45955f77b44596e080480c577fb7221df59672d0bc8cd8cd4b6f"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-readex-400.woff2",
+        "bytes": 8820,
+        "sha256": "fd0a9ff5d9cb20914fa2dfc362b5d2783b5f33961aca053283c01e5c7155f327"
+      }
+    },
+    {
+      "id": "ar-readex-600",
+      "kind": "arabic",
+      "family": "Readex Pro",
+      "css": "ClinArReadex",
+      "role": "Arabic usage examples",
+      "embed": false,
+      "axes": {
+        "HEXP": 0,
+        "wght": 600
+      },
+      "weight": 600,
+      "source": {
+        "path": "ofl/readexpro/ReadexPro[HEXP,wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 278544,
+        "sha256": "268bba7e1e8f3b14d798b3fb0e40ebaa3fc39308c9ac0020e2faf6df181cc30e"
+      },
+      "license": {
+        "path": "ofl/readexpro/OFL.txt",
+        "sha256": "b41267a3903a45955f77b44596e080480c577fb7221df59672d0bc8cd8cd4b6f"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-readex-600.woff2",
+        "bytes": 9412,
+        "sha256": "0a5f5c117f56cefbe8e303f43ff48c7c1a3a9c7cf7a1bd4b8d2b03008d41619d"
+      }
+    },
+    {
+      "id": "ar-vazir-400",
+      "kind": "arabic",
+      "family": "Vazirmatn",
+      "css": "ClinArVazir",
+      "role": "Arabic usage examples",
+      "embed": false,
+      "axes": {
+        "wght": 400
+      },
+      "weight": 400,
+      "source": {
+        "path": "ofl/vazirmatn/Vazirmatn[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 241328,
+        "sha256": "696249a2c74b39ffdef55de4df2809c5b639d3ff80d618d8160a095d2fd49dca"
+      },
+      "license": {
+        "path": "ofl/vazirmatn/OFL.txt",
+        "sha256": "17e355067c8284f47743a1ee3b1ef7ff684ff0601eda357f9353b10b3016ab31"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-vazir-400.woff2",
+        "bytes": 11964,
+        "sha256": "a787859a1aa98fcd34ba9e79952372772ba76de000ca1e4e5b354810a383b6be"
+      }
+    },
+    {
+      "id": "ar-vazir-600",
+      "kind": "arabic",
+      "family": "Vazirmatn",
+      "css": "ClinArVazir",
+      "role": "Arabic usage examples",
+      "embed": false,
+      "axes": {
+        "wght": 600
+      },
+      "weight": 600,
+      "source": {
+        "path": "ofl/vazirmatn/Vazirmatn[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 241328,
+        "sha256": "696249a2c74b39ffdef55de4df2809c5b639d3ff80d618d8160a095d2fd49dca"
+      },
+      "license": {
+        "path": "ofl/vazirmatn/OFL.txt",
+        "sha256": "17e355067c8284f47743a1ee3b1ef7ff684ff0601eda357f9353b10b3016ab31"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-vazir-600.woff2",
+        "bytes": 12432,
+        "sha256": "989cac4076955b9740bdec146edcc3bac71c41fb5cd547c830ca3bd7240d9db7"
+      }
+    },
+    {
+      "id": "ar-alexandria-400",
+      "kind": "arabic",
+      "family": "Alexandria",
+      "css": "ClinArAlexandria",
+      "role": "Arabic usage examples",
+      "embed": false,
+      "axes": {
+        "wght": 400
+      },
+      "weight": 400,
+      "source": {
+        "path": "ofl/alexandria/Alexandria[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 332488,
+        "sha256": "db8ae03b62d55a65aa4e04307878df8c00d6e5388e4800635cbe0e22b6411b64"
+      },
+      "license": {
+        "path": "ofl/alexandria/OFL.txt",
+        "sha256": "56372aed19c2701f50e6e784110af55bf8796ed51648805324ad1adb0a3860bb"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-alexandria-400.woff2",
+        "bytes": 8732,
+        "sha256": "45201b07edd8e4b4a87a5a228b3f264d793e4b37948d5efa279f6a8546d22478"
+      }
+    },
+    {
+      "id": "ar-alexandria-600",
+      "kind": "arabic",
+      "family": "Alexandria",
+      "css": "ClinArAlexandria",
+      "role": "Arabic usage examples",
+      "embed": false,
+      "axes": {
+        "wght": 600
+      },
+      "weight": 600,
+      "source": {
+        "path": "ofl/alexandria/Alexandria[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 332488,
+        "sha256": "db8ae03b62d55a65aa4e04307878df8c00d6e5388e4800635cbe0e22b6411b64"
+      },
+      "license": {
+        "path": "ofl/alexandria/OFL.txt",
+        "sha256": "56372aed19c2701f50e6e784110af55bf8796ed51648805324ad1adb0a3860bb"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-alexandria-600.woff2",
+        "bytes": 9276,
+        "sha256": "990584c9f73626795e281a5d27619dd6b50240a1f4f352fa607fc2ff1fc34f0b"
+      }
+    },
+    {
+      "id": "ar-rubik-400",
+      "kind": "arabic",
+      "family": "Rubik",
+      "css": "ClinArRubik",
+      "role": "Arabic usage examples",
+      "embed": true,
+      "axes": {
+        "wght": 400
+      },
+      "weight": 400,
+      "source": {
+        "path": "ofl/rubik/Rubik[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 359804,
+        "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+      },
+      "license": {
+        "path": "ofl/rubik/OFL.txt",
+        "sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-rubik-400.woff2",
+        "bytes": 15432,
+        "sha256": "0fb1ff1ca21cdccaf955b27f0b2d2cc4eb7e36ae2c5e146be5997b6458b1d30b"
+      }
+    },
+    {
+      "id": "ar-rubik-600",
+      "kind": "arabic",
+      "family": "Rubik",
+      "css": "ClinArRubik",
+      "role": "Arabic usage examples",
+      "embed": true,
+      "axes": {
+        "wght": 600
+      },
+      "weight": 600,
+      "source": {
+        "path": "ofl/rubik/Rubik[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 359804,
+        "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+      },
+      "license": {
+        "path": "ofl/rubik/OFL.txt",
+        "sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-rubik-600.woff2",
+        "bytes": 15672,
+        "sha256": "a3053d9252be14016a8287d4b6e44a6cf2efce36ec590c5804ad01a84a83eb58"
+      }
+    },
+    {
+      "id": "ar-cairo-400",
+      "kind": "arabic",
+      "family": "Cairo",
+      "css": "ClinArCairo",
+      "role": "Arabic usage examples",
+      "embed": false,
+      "axes": {
+        "slnt": 0,
+        "wght": 400
+      },
+      "weight": 400,
+      "source": {
+        "path": "ofl/cairo/Cairo[slnt,wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 599548,
+        "sha256": "667c987182391c91f4e57a2f455b1794fb5e3ee6ca4ef3383e86bb690fa9c964"
+      },
+      "license": {
+        "path": "ofl/cairo/OFL.txt",
+        "sha256": "a4554e1799d42e1405924b61eb0e0722ae1623b1f1f07f995348f96c496362a9"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-cairo-400.woff2",
+        "bytes": 9236,
+        "sha256": "0080862e5a08759908282349a8a2ba81eae9393f8d33e5403ad5ff5d4e6517ab"
+      }
+    },
+    {
+      "id": "ar-cairo-600",
+      "kind": "arabic",
+      "family": "Cairo",
+      "css": "ClinArCairo",
+      "role": "Arabic usage examples",
+      "embed": false,
+      "axes": {
+        "slnt": 0,
+        "wght": 600
+      },
+      "weight": 600,
+      "source": {
+        "path": "ofl/cairo/Cairo[slnt,wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 599548,
+        "sha256": "667c987182391c91f4e57a2f455b1794fb5e3ee6ca4ef3383e86bb690fa9c964"
+      },
+      "license": {
+        "path": "ofl/cairo/OFL.txt",
+        "sha256": "a4554e1799d42e1405924b61eb0e0722ae1623b1f1f07f995348f96c496362a9"
+      },
+      "cut": {
+        "text": "samples-ar.txt",
+        "plus": "one space"
+      },
+      "woff2": {
+        "file": "lettering/subset/ar-cairo-600.woff2",
+        "bytes": 9636,
+        "sha256": "cec921de6127c366c83cc033ece797c9f90e851f106d3b6974df51bc0ca789b7"
+      }
+    },
+    {
+      "id": "lat-fraunces-600",
+      "kind": "latin",
+      "family": "Fraunces",
+      "css": "Fraunces",
+      "role": "Direction A display, headings, logo",
+      "embed": true,
+      "axes": {
+        "wght": 600,
+        "opsz": 72,
+        "SOFT": 50,
+        "WONK": 0
+      },
+      "weight": 600,
+      "source": {
+        "path": "ofl/fraunces/Fraunces[SOFT,WONK,opsz,wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 360440,
+        "sha256": "177ff6c0f14e5550a3c624247cd1189611d4eb65d000b14944c63d967958abbb"
+      },
+      "license": {
+        "path": "ofl/fraunces/OFL.txt",
+        "sha256": "bdf4c22802eaf804f998195871c6b8938aac2ac14b2d78a8bd66a6f1eced833b"
+      },
+      "cut": {
+        "unicodes": "U+0020-007E,U+00A0-00FF,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2026,U+2022,U+00D7,U+2713,U+2192,U+2212"
+      },
+      "woff2": {
+        "file": "lettering/subset/lat-fraunces-600.woff2",
+        "bytes": 17724,
+        "sha256": "e32ed4a9aa3fbd0e5ef2d4fbbf0fa7b90d98021f9bd4b8ac4e112fdd0106670e"
+      }
+    },
+    {
+      "id": "lat-fraunces-700",
+      "kind": "latin",
+      "family": "Fraunces",
+      "css": "Fraunces",
+      "role": "Direction A display, headings, logo",
+      "embed": true,
+      "axes": {
+        "wght": 700,
+        "opsz": 72,
+        "SOFT": 50,
+        "WONK": 0
+      },
+      "weight": 700,
+      "source": {
+        "path": "ofl/fraunces/Fraunces[SOFT,WONK,opsz,wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 360440,
+        "sha256": "177ff6c0f14e5550a3c624247cd1189611d4eb65d000b14944c63d967958abbb"
+      },
+      "license": {
+        "path": "ofl/fraunces/OFL.txt",
+        "sha256": "bdf4c22802eaf804f998195871c6b8938aac2ac14b2d78a8bd66a6f1eced833b"
+      },
+      "cut": {
+        "unicodes": "U+0020-007E,U+00A0-00FF,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2026,U+2022,U+00D7,U+2713,U+2192,U+2212"
+      },
+      "woff2": {
+        "file": "lettering/subset/lat-fraunces-700.woff2",
+        "bytes": 17776,
+        "sha256": "a99d1bd718def676c4a8405a3db36cb1b3480ad49306bddfe67cb6212697076b"
+      }
+    },
+    {
+      "id": "lat-atkinson-400",
+      "kind": "latin",
+      "family": "Atkinson Hyperlegible Next",
+      "css": "Atkinson Hyperlegible Next",
+      "role": "Direction A interface text, numerals",
+      "embed": true,
+      "axes": {
+        "wght": 400
+      },
+      "weight": 400,
+      "source": {
+        "path": "ofl/atkinsonhyperlegiblenext/AtkinsonHyperlegibleNext[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 114552,
+        "sha256": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745"
+      },
+      "license": {
+        "path": "ofl/atkinsonhyperlegiblenext/OFL.txt",
+        "sha256": "aca6a428580965d2297d1b718042dd427c2a9443ece3b0d02d758e161e0c4030"
+      },
+      "cut": {
+        "unicodes": "U+0020-007E,U+00A0-00FF,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2026,U+2022,U+00D7,U+2713,U+2192,U+2212"
+      },
+      "woff2": {
+        "file": "lettering/subset/lat-atkinson-400.woff2",
+        "bytes": 11140,
+        "sha256": "eaf08b3a49269b9aa3ab875de5f6347097b24d51162ee65ffa420987222334e8"
+      }
+    },
+    {
+      "id": "lat-atkinson-600",
+      "kind": "latin",
+      "family": "Atkinson Hyperlegible Next",
+      "css": "Atkinson Hyperlegible Next",
+      "role": "Direction A interface text, numerals",
+      "embed": true,
+      "axes": {
+        "wght": 600
+      },
+      "weight": 600,
+      "source": {
+        "path": "ofl/atkinsonhyperlegiblenext/AtkinsonHyperlegibleNext[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 114552,
+        "sha256": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745"
+      },
+      "license": {
+        "path": "ofl/atkinsonhyperlegiblenext/OFL.txt",
+        "sha256": "aca6a428580965d2297d1b718042dd427c2a9443ece3b0d02d758e161e0c4030"
+      },
+      "cut": {
+        "unicodes": "U+0020-007E,U+00A0-00FF,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2026,U+2022,U+00D7,U+2713,U+2192,U+2212"
+      },
+      "woff2": {
+        "file": "lettering/subset/lat-atkinson-600.woff2",
+        "bytes": 11684,
+        "sha256": "4ac9d7b61091fb291f928ead01af1fb6b2cdcff4a19a546047b2e9c756816e6d"
+      }
+    },
+    {
+      "id": "lat-rubik-400",
+      "kind": "latin",
+      "family": "Rubik",
+      "css": "Rubik",
+      "role": "Direction B interface text, numerals",
+      "embed": true,
+      "axes": {
+        "wght": 400
+      },
+      "weight": 400,
+      "source": {
+        "path": "ofl/rubik/Rubik[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 359804,
+        "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+      },
+      "license": {
+        "path": "ofl/rubik/OFL.txt",
+        "sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb"
+      },
+      "cut": {
+        "unicodes": "U+0020-007E,U+00A0-00FF,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2026,U+2022,U+00D7,U+2713,U+2192,U+2212"
+      },
+      "woff2": {
+        "file": "lettering/subset/lat-rubik-400.woff2",
+        "bytes": 19344,
+        "sha256": "0f675788aec5ce4d62dc23b80db49ce9d8e5e72177c8f6030339ca3b56de9945"
+      }
+    },
+    {
+      "id": "lat-rubik-600",
+      "kind": "latin",
+      "family": "Rubik",
+      "css": "Rubik",
+      "role": "Direction B headings, interface labels",
+      "embed": true,
+      "axes": {
+        "wght": 600
+      },
+      "weight": 600,
+      "source": {
+        "path": "ofl/rubik/Rubik[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 359804,
+        "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+      },
+      "license": {
+        "path": "ofl/rubik/OFL.txt",
+        "sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb"
+      },
+      "cut": {
+        "unicodes": "U+0020-007E,U+00A0-00FF,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2026,U+2022,U+00D7,U+2713,U+2192,U+2212"
+      },
+      "woff2": {
+        "file": "lettering/subset/lat-rubik-600.woff2",
+        "bytes": 19492,
+        "sha256": "88a586be3c5274a02048db4c50c19d4dc225668006d6c0a021c375911801ff8d"
+      }
+    },
+    {
+      "id": "lat-rubik-700",
+      "kind": "latin",
+      "family": "Rubik",
+      "css": "Rubik",
+      "role": "Direction B display, logo",
+      "embed": true,
+      "axes": {
+        "wght": 700
+      },
+      "weight": 700,
+      "source": {
+        "path": "ofl/rubik/Rubik[wght].ttf",
+        "commit": "b68b528a75da7d9b73f3928899c07a23083a6633",
+        "bytes": 359804,
+        "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+      },
+      "license": {
+        "path": "ofl/rubik/OFL.txt",
+        "sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb"
+      },
+      "cut": {
+        "unicodes": "U+0020-007E,U+00A0-00FF,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2026,U+2022,U+00D7,U+2713,U+2192,U+2212"
+      },
+      "woff2": {
+        "file": "lettering/subset/lat-rubik-700.woff2",
+        "bytes": 19528,
+        "sha256": "7e6d7abf6dfd125bc39884cde2bbf3bdaf94204c6df5ee632ed99851f6c980a0"
+      }
+    }
+  ]
+}

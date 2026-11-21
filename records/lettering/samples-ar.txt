@@ -1,0 +1,76 @@
+# Arabic wording not reviewed by a native reader. Usage examples for pictures only; every character here is glyph cost in the subset.
+# Format: a line starting with # names the next line; the next line is the exact text shown on the review page.
+#name-1
+ليلى حداد
+#name-2
+أحمد المنصوري
+#name-3
+نورا العبيدي
+#label-book
+احجز موعدًا
+#label-reschedule
+إعادة جدولة الموعد
+#label-cancel
+إلغاء الموعد
+#label-save-note
+حفظ الملاحظة
+#label-try-again
+حاول مرة أخرى
+#status-scheduled
+مجدول
+#status-completed
+مكتمل
+#status-canceled
+ملغى
+#status-missed
+فائت
+#reminder-sent
+تم الإرسال
+#reminder-not-sent
+لم يُرسَل
+#validation
+اختر وقتًا لا يزال متاحًا
+#slot-lost
+لم يعد هذا الوقت متاحًا. اختر وقتًا آخر.
+#save-failed
+تعذّر حفظ الملاحظة. نصّك محفوظ هنا، حاول مرة أخرى.
+#title-appointments
+المواعيد
+#title-slot-step
+اختر الوقت
+#field-clinician
+الأخصائي
+#field-date
+التاريخ
+#field-slots
+الأوقات المتاحة
+#field-zone
+المنطقة الزمنية
+#nav-back
+رجوع
+#nav-next
+التالي
+#step
+الخطوة ٢ من ٤
+#forms-positions
+ع عـ ـعـ ـع   ب بـ ـبـ ـب   ه هـ ـهـ ـه
+#marks
+مَدْرَسَةٌ   كِتَابٌ   مُعَلِّمٌ
+#punctuation
+هل تريد تغيير الموعد؟ نعم، سنرسل تذكيرًا؛ ثم نؤكد.
+#digits-indic
+٠١٢٣٤٥٦٧٨٩
+#digits-western
+الأرقام الغربية 0123456789
+#mixed-ref
+الموعد APT-0042 مع Ana Reyes
+#mixed-when
+12 نوفمبر 2026 الساعة 09:30
+#mixed-when-indic
+١٢ نوفمبر ٢٠٢٦ الساعة ٠٩:٣٠
+#day-thu
+الخميس
+#reminder-title
+التذكيرات
+#field-clinician-value
+مع Ana Reyes

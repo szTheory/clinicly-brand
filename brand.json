@@ -1,0 +1,1279 @@
+{
+  "about": "Clinicly brand data, version 0.3. Every rule in the brand book as structured data; American English. Clinicly is a fictional brand, made to give FableBook demo screens a believable clinic app. The name is not cleared: other products already use the name Clinicly. This edition defines no logo animation and no sound. Its application pages are drawn from a records file that is handed over beside this folder, not inside it.",
+  "name": "Clinicly",
+  "version": "0.3",
+  "date": "November 12, 2026",
+  "fictional": true,
+  "nameCleared": false,
+  "nameClearance": "The name is not cleared. It was checked on November 11, 2026 against the US, United Arab Emirates and Saudi Arabia app stores through a loose search, and against four web addresses by DNS only; three of the four addresses are held by others. No app of exactly this name appeared in the US store results, which is not proof of anything. Trademark registers, other regions and other languages were not searched. This is not proof of availability or of a legal conflict. Clinicly is kept because it is a fictional brand.",
+  "revisions": [
+    {
+      "version": "0.3",
+      "date": "November 12, 2026",
+      "changes": "Corrections after review: the opening text and the To review list no longer say the application pages and records are missing; the logo description names the wedge, not the dropped block; the validator commands give the path inside the hand-over folder; each booking flow step now says what is on the screen and what the values are right after the action, so sending and complete no longer disagree."
+    },
+    {
+      "version": "0.2",
+      "date": "November 12, 2026",
+      "changes": "The symbol is a softened wedge pulled out of a disc again; the app tile is one color on Cornflower; the favicon is vector art (the pixel drawings are gone). New: the application pages (appointments, booking, patients, patient details and visit notes, reminders, color scheme and direction, focus, text size, motion and connection, Arabic examples), four user flows, the records they are drawn from, and requirements to verify later."
+    },
+    {
+      "version": "0.1",
+      "date": "November 11, 2026",
+      "changes": "First edition: the identity (a slot of the day pulled out of a disc, Cornflower and Paper, Rubik), a light and a dark theme, the two status families, vocabulary, voice, personas and jobs, imagery, spacing and shape, and Arabic usage examples."
+    }
+  ],
+  "idea": {
+    "line": "The logo is one slot pulled out of a day.",
+    "explanation": [
+      "People open a clinic app to do two things: find a time that is really free and know it is booked. Clinicly shows both with one shape. The disc is the day. The wedge pulled out of it is a slot, taken for one person.",
+      "The wedge is Cornflower, the one accent, and the disc is the ink color. The same disc repeats as the dots over the two i’s in the word.",
+      "The word is Clinicly, set in Rubik Bold and outlined. The symbol and the word are two units with a set gap between them."
+    ]
+  },
+  "tagline": "Book a time that is really free.",
+  "positioning": "Clinicly is a clinic app for phone and desktop. It helps a patient book an appointment in a few minutes and helps a clinic see its day at a glance.",
+  "job": "Help me find a time that is really free, book it, and trust that it is booked.",
+  "audience": {
+    "readers": [
+      {
+        "who": "FableBook maintainers",
+        "job": "Build demo screens for the UI catalog and need exact values.",
+        "questions": "What color is a Missed appointment, what does a time that was just taken say, what does the logo look like at 16 px, and which icons flip in Arabic?"
+      },
+      {
+        "who": "Coding assistants and other LLM tools",
+        "job": "Turn this book into scenarios and screens.",
+        "questions": "Structured values, contrast pairs, real copy, and one name for each thing."
+      }
+    ],
+    "users": [
+      {
+        "who": "Jo Marsh, 34, patient",
+        "theirDay": "Books on a lunch break, with one thumb, between a meeting and a sandwich.",
+        "theirWords": "“I only have a few minutes. Show me times I can actually pick.”",
+        "clinicShows": "Big rounded time slots, one accent, and a Book appointment button with a label she can read at a glance."
+      },
+      {
+        "who": "Sam Lindqvist, volunteer at the front door",
+        "theirDay": "Checks who is expected, glancing from the entrance to a screen.",
+        "theirWords": "“I just need to know who is next.”",
+        "clinicShows": "Names and times, strong and large, and nothing else: a read-only role sees no patient details."
+      },
+      {
+        "who": "Layla Haddad, patient who reads Arabic",
+        "theirDay": "Reads Arabic and uses a few English words for dates and the clinician’s name.",
+        "theirWords": "“Please do not mix up the order of the date.”",
+        "clinicShows": "Right-to-left screens where Arabic, a Latin clinician name and a reference like APT-0042 each stay in the right order."
+      }
+    ],
+    "roles": [
+      {
+        "role": "Front desk coordinator",
+        "person": "Maribel Okafor",
+        "can": "Open the day, patients and appointments; book, reschedule and cancel; see reminder status.",
+        "cannot": "Open visit notes.",
+        "whenDenied": "A screen that says visit notes are not available to this role, with no patient details on it."
+      },
+      {
+        "role": "Clinician",
+        "person": "Ana Reyes",
+        "can": "Read the day; read and write the visit notes of her own patients.",
+        "cannot": "Open another clinician’s notes.",
+        "whenDenied": "A screen that names what cannot be opened and where to ask."
+      },
+      {
+        "role": "Clinic manager",
+        "person": "Priya Raman",
+        "can": "Open everything the other roles can, including reminder status for the whole day.",
+        "cannot": "Edit a visit note she did not write.",
+        "whenDenied": "The note opens read-only, with the word Read-only beside it."
+      },
+      {
+        "role": "Read-only",
+        "person": "Sam Lindqvist",
+        "can": "See names and times of today’s appointments.",
+        "cannot": "Open a patient’s details.",
+        "whenDenied": "A screen that says he does not have access and reveals nothing about the patient."
+      }
+    ]
+  },
+  "values": [
+    {
+      "value": "Times you can pick",
+      "meaning": "Every slot on screen is one you can book. A slot that has just been taken says so and offers other times."
+    },
+    {
+      "value": "Calm about care",
+      "meaning": "No blame, no jokes about failures and no promises about outcomes. Words are plain and short."
+    },
+    {
+      "value": "Private by default",
+      "meaning": "A screen a person cannot open names the screen, not the patient. Reminder text never repeats a visit note."
+    },
+    {
+      "value": "Clear in any language and size",
+      "meaning": "The layout holds in English and Arabic, in light and dark, and at larger text sizes."
+    },
+    {
+      "value": "Quiet about itself",
+      "meaning": "Cornflower marks the one thing to do and the time you chose. Nothing else on the screen shouts."
+    }
+  ],
+  "rules": [
+    "The name is Clinicly: one word, capital C. Never CLINICLY or ClinicLy.",
+    "Cornflower is the accent for one thing to do and the time you chose. Never a status, never small text on a light ground.",
+    "The logo is the symbol and the word with a set gap. Never a shape behind it, and never a tagline in it."
+  ],
+  "logo": {
+    "mark": "A disc with one wedge pulled out along a diagonal: a slot of the day taken for a person. The corners of the wedge and of the notch it leaves are softened to match the rounded ends of Rubik. The disc is Navy Ink or Mist; the wedge is Cornflower or Cornflower Light.",
+    "wordmark": "Clinicly, one word, in Rubik, outlined from the font so no live text is needed. The weight is 700 on light and 660 on dark, so the word looks the same weight on both. The dots over the two i’s are small discs, the same shape as the symbol’s disc.",
+    "lockupRule": "The symbol and the word are two units. The smallest horizontal distance between them, measured row by row from the ink of the symbol to the ink of the word, is 0.30 of the height of a capital letter. Do not widen it, close it or retype the word.",
+    "mono": "The same drawing in a single color: Navy Ink on light and Mist on dark, in the files named mono and mono-dark. The notch the wedge leaves carries the idea, so nothing is redrawn.",
+    "small": "Below 32 px tall the symbol has its own small master, with a wider wedge pulled out farther. The favicon uses it.",
+    "clear": "Keep clear space on every side of at least 8 px and never less than the height of a dot over an i in the lockup, measured from the outermost ink. Nothing enters it: no text, edge or other logo.",
+    "minNote": "On screen the full logo is never smaller than 16 px tall, the symbol alone never smaller than 24 px (below that use the small master or the favicon) and a favicon never smaller than 16 px. Print sizes are not specified in this edition.",
+    "theme": "The logo has a version for each theme. On light the wedge is Cornflower; on dark it is Cornflower Light. Use the version made for the background; do not make one by inverting the other.",
+    "background": "No shape behind the logo: it sits directly on the page. The one exception is the app tile and the avatar, which are the symbol on a Cornflower or Night High ground. On a photograph or screenshot, use a calm area at least as wide as the logo plus its clear space.",
+    "similar": "A disc with a wedge out of it is also what a pie graph looks like, and at 16 px the wedge is a small notch. What keeps it from reading as a graph: there is only ever one wedge, pulled out and rounded, never a set of slices, never labeled and never sized by a value. Do not place it beside data graphs.",
+    "gapInCapHeights": 0.3,
+    "minimumSizes": [
+      {
+        "version": "Full logo",
+        "screen": "16 px tall",
+        "print": "Not specified"
+      },
+      {
+        "version": "Symbol",
+        "screen": "24 px tall; use the small master below 32 px",
+        "print": "Not specified"
+      },
+      {
+        "version": "Favicon",
+        "screen": "16 px, hand-fitted",
+        "print": "Not specified"
+      }
+    ],
+    "misuse": [
+      "Don’t put a plate or a shape behind the logo.",
+      "Don’t widen or close the gap between the symbol and the word.",
+      "Don’t add a tagline or any text to the logo.",
+      "Don’t set the disc in Cornflower or the wedge in Navy Ink.",
+      "Don’t stretch or squeeze the logo.",
+      "Don’t recolor the logo to a status color.",
+      "Don’t outline the logo.",
+      "Don’t rotate the symbol, move the wedge or put it back in the disc."
+    ],
+    "onPhotography": {
+      "head": "On screenshots and photographs",
+      "rules": [
+        "Place the logo on a calm area at least as wide as the logo and its clear space.",
+        "Use the light drawing on a light area and the dark drawing on a dark one. If neither reads well, move the logo.",
+        "Do not put a shape or a shadow behind it to make it read."
+      ]
+    },
+    "useByOthers": [
+      "FableBook screens, documentation and examples may show the logo unchanged to stand for Clinicly.",
+      "Do not use the logo to suggest that Clinicly, a fictional brand, endorses or certifies a real product or clinic.",
+      "Do not alter the logo, or build a new logo from the symbol."
+    ],
+    "clearSpace": "at least 8 px, and never less than the height of a dot over an i in the lockup, on every side, measured from the outermost ink"
+  },
+  "color": {
+    "defaultTheme": "light",
+    "light": [
+      {
+        "name": "Paper",
+        "hex": "#F7F6F2",
+        "role": "The page background. Light is the default theme.",
+        "sharePercent": 46
+      },
+      {
+        "name": "Navy Ink",
+        "hex": "#16202C",
+        "role": "Text and links, and the disc of the logo. The one near-black.",
+        "sharePercent": 8
+      },
+      {
+        "name": "White",
+        "hex": "#FFFFFF",
+        "role": "Cards, fields and time slots, and the label on the Book appointment button.",
+        "sharePercent": 20
+      },
+      {
+        "name": "Fog",
+        "hex": "#ECEBE5",
+        "role": "Raised fills and the ground of the offline and reconnecting banner.",
+        "sharePercent": 6
+      },
+      {
+        "name": "Cornflower",
+        "hex": "#5373A9",
+        "role": "The accent: the Book appointment button, the selected time, the focus ring and the wedge of the logo. White text sits on it.",
+        "sharePercent": 8
+      },
+      {
+        "name": "Cornflower Tint",
+        "hex": "#DDE6F3",
+        "role": "The fill of the selected time slot.",
+        "sharePercent": 3
+      },
+      {
+        "name": "Slate",
+        "hex": "#4A5666",
+        "role": "Secondary text and captions.",
+        "sharePercent": 4
+      },
+      {
+        "name": "Border Strong",
+        "hex": "#7B8595",
+        "role": "The outline of fields and time slots, dark enough to see.",
+        "sharePercent": 2
+      },
+      {
+        "name": "Error Red",
+        "hex": "#C42B13",
+        "role": "Error text a person can act on, always beside words and an icon.",
+        "sharePercent": 1
+      },
+      {
+        "name": "Hairline",
+        "hex": "#D6D5CD",
+        "role": "Dividers and card borders. Never the only boundary of a control.",
+        "sharePercent": 2
+      }
+    ],
+    "dark": [
+      {
+        "name": "Night",
+        "hex": "#0F1620",
+        "role": "The page background in the dark theme, and the label on the dark Book appointment button.",
+        "sharePercent": 46
+      },
+      {
+        "name": "Mist",
+        "hex": "#D0D8E4",
+        "role": "Text and the disc of the logo; softer than white so a full screen of it does not glare.",
+        "sharePercent": 8
+      },
+      {
+        "name": "Night Raised",
+        "hex": "#172131",
+        "role": "Cards, fields and time slots.",
+        "sharePercent": 20
+      },
+      {
+        "name": "Night High",
+        "hex": "#202D42",
+        "role": "Raised fills and the ground of the offline and reconnecting banner.",
+        "sharePercent": 6
+      },
+      {
+        "name": "Cornflower Light",
+        "hex": "#B1C5EE",
+        "role": "The accent on dark: the Book appointment button, the selected time, the focus ring and the wedge.",
+        "sharePercent": 8
+      },
+      {
+        "name": "Cornflower Night",
+        "hex": "#22324D",
+        "role": "The fill of the selected time slot.",
+        "sharePercent": 3
+      },
+      {
+        "name": "Mist Gray",
+        "hex": "#A0ACBE",
+        "role": "Secondary text and captions.",
+        "sharePercent": 4
+      },
+      {
+        "name": "Border Strong Dark",
+        "hex": "#7E8CA3",
+        "role": "The outline of fields and time slots.",
+        "sharePercent": 2
+      },
+      {
+        "name": "Error Light",
+        "hex": "#EE9580",
+        "role": "Error text on dark, always beside words and an icon.",
+        "sharePercent": 1
+      },
+      {
+        "name": "Night Line",
+        "hex": "#33435C",
+        "role": "Dividers and card borders.",
+        "sharePercent": 2
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Slate",
+        "hex": "#4A5666",
+        "role": "Secondary text and captions on light.",
+        "theme": "light"
+      },
+      {
+        "name": "Mist Gray",
+        "hex": "#A0ACBE",
+        "role": "Secondary text and captions on dark.",
+        "theme": "dark"
+      }
+    ],
+    "status": {
+      "appointment": [
+        {
+          "word": "Scheduled",
+          "icon": "calendar",
+          "textLight": "#2C5A80",
+          "groundLight": "#E4EDF5",
+          "textDark": "#5FA3EA",
+          "groundDark": "#1B2E44",
+          "meaning": "The appointment is booked and has not happened yet."
+        },
+        {
+          "word": "Completed",
+          "icon": "check-circle",
+          "textLight": "#2B2F33",
+          "groundLight": "#E7E8EA",
+          "textDark": "#E2DFD6",
+          "groundDark": "#2D2C2A",
+          "meaning": "The appointment took place."
+        },
+        {
+          "word": "Canceled",
+          "icon": "x-circle",
+          "textLight": "#5B6168",
+          "groundLight": "#EEEEEC",
+          "textDark": "#939BA8",
+          "groundDark": "#23272D",
+          "meaning": "The appointment was canceled. It stays in the record. Canceled is not an error."
+        },
+        {
+          "word": "Missed",
+          "icon": "clock-off",
+          "textLight": "#6B4A12",
+          "groundLight": "#F8EAD2",
+          "textDark": "#EBC27A",
+          "groundDark": "#40301A",
+          "meaning": "The patient did not come. Missed is not an error."
+        }
+      ],
+      "reminder": [
+        {
+          "word": "Scheduled",
+          "icon": "bell",
+          "textLight": "#2F5F63",
+          "groundLight": "#E1EEEE",
+          "textDark": "#5FCBC0",
+          "groundDark": "#173836",
+          "meaning": "A reminder is queued to send."
+        },
+        {
+          "word": "Sent",
+          "icon": "send",
+          "textLight": "#33404D",
+          "groundLight": "#E6EBF0",
+          "textDark": "#8BA0BE",
+          "groundDark": "#26334A",
+          "meaning": "The reminder was sent to the patient."
+        },
+        {
+          "word": "Not sent",
+          "icon": "alert-circle",
+          "textLight": "#C42B13",
+          "groundLight": "#FBE3DE",
+          "textDark": "#EE9580",
+          "groundDark": "#4A2420",
+          "meaning": "The reminder could not be sent, for example when there is no phone number. Shown with Try again. The only status in the error color."
+        }
+      ],
+      "rule": "A status is a word and an icon first; its color only backs them up. The two Scheduled words are told apart by a family label (Appointment or Reminder) and by different icons, a calendar and a bell, and the two are never drawn on one chip. Cornflower is never a status. There is no clinical severity scale: no red, amber and green triage. When a status is unknown, show the plain word Unknown in the muted text color with no icon, never a guessed status."
+    },
+    "contrastPairs": [
+      {
+        "id": "body",
+        "role": "Body text",
+        "use": "Reading text in this book and in documents.",
+        "minimum": 4.5,
+        "light": {
+          "text": "#16202C",
+          "ground": "#F7F6F2",
+          "contrast": 15.2,
+          "use": "Any text size (AAA)"
+        },
+        "dark": {
+          "text": "#D0D8E4",
+          "ground": "#0F1620",
+          "contrast": 12.65,
+          "use": "Any text size (AAA)"
+        }
+      },
+      {
+        "id": "descriptor",
+        "role": "Secondary text",
+        "use": "Descriptions and metadata under a title.",
+        "minimum": 4.5,
+        "light": {
+          "text": "#4A5666",
+          "ground": "#F7F6F2",
+          "contrast": 6.9,
+          "use": "Any text size (AA)"
+        },
+        "dark": {
+          "text": "#A0ACBE",
+          "ground": "#0F1620",
+          "contrast": 7.9,
+          "use": "Any text size (AAA)"
+        }
+      },
+      {
+        "id": "caption",
+        "role": "Caption",
+        "use": "Captions, times and time zones on a card.",
+        "minimum": 4.5,
+        "light": {
+          "text": "#4A5666",
+          "ground": "#FFFFFF",
+          "contrast": 7.46,
+          "use": "Any text size (AAA)"
+        },
+        "dark": {
+          "text": "#A0ACBE",
+          "ground": "#172131",
+          "contrast": 7.03,
+          "use": "Any text size (AAA)"
+        }
+      },
+      {
+        "id": "application-copy",
+        "role": "Text in the app",
+        "use": "Names and notes on a card, row or form.",
+        "minimum": 4.5,
+        "light": {
+          "text": "#16202C",
+          "ground": "#FFFFFF",
+          "contrast": 16.44,
+          "use": "Any text size (AAA)"
+        },
+        "dark": {
+          "text": "#D0D8E4",
+          "ground": "#172131",
+          "contrast": 11.26,
+          "use": "Any text size (AAA)"
+        }
+      },
+      {
+        "id": "hero",
+        "role": "Headline, large",
+        "use": "A large headline, 24 px and up. Cornflower on Paper only just clears 3:1, so never small text.",
+        "minimum": 3,
+        "light": {
+          "text": "#5373A9",
+          "ground": "#F7F6F2",
+          "contrast": 4.42,
+          "use": "Large text and graphics only"
+        },
+        "dark": {
+          "text": "#B1C5EE",
+          "ground": "#0F1620",
+          "contrast": 10.45,
+          "use": "Any text size (AAA)"
+        }
+      },
+      {
+        "id": "link",
+        "role": "Link",
+        "use": "Links. Navy Ink on light, Mist on dark, underlined.",
+        "minimum": 4.5,
+        "light": {
+          "text": "#16202C",
+          "ground": "#FFFFFF",
+          "contrast": 16.44,
+          "use": "Any text size (AAA)"
+        },
+        "dark": {
+          "text": "#D0D8E4",
+          "ground": "#172131",
+          "contrast": 11.26,
+          "use": "Any text size (AAA)"
+        }
+      },
+      {
+        "id": "focus",
+        "role": "Focus ring",
+        "use": "The 3 px ring on a focused control. Cornflower on light, Cornflower Light on dark.",
+        "minimum": 3,
+        "light": {
+          "text": "#5373A9",
+          "ground": "#F7F6F2",
+          "contrast": 4.42,
+          "use": "Large text and graphics only"
+        },
+        "dark": {
+          "text": "#B1C5EE",
+          "ground": "#0F1620",
+          "contrast": 10.45,
+          "use": "Any text size (AAA)"
+        }
+      },
+      {
+        "id": "artwork",
+        "role": "Logo and artwork",
+        "use": "The logo, read as a shape, not as text.",
+        "minimum": 3,
+        "light": {
+          "text": "#5373A9",
+          "ground": "#F7F6F2",
+          "contrast": 4.42,
+          "use": "Large text and graphics only"
+        },
+        "dark": {
+          "text": "#B1C5EE",
+          "ground": "#0F1620",
+          "contrast": 10.45,
+          "use": "Any text size (AAA)"
+        }
+      },
+      {
+        "id": "button-label",
+        "role": "Button label",
+        "use": "White on Cornflower; Night on Cornflower Light. Any text on the accent fill.",
+        "minimum": 4.5,
+        "light": {
+          "text": "#FFFFFF",
+          "ground": "#5373A9",
+          "contrast": 4.78,
+          "use": "Any text size (AA)"
+        },
+        "dark": {
+          "text": "#0F1620",
+          "ground": "#B1C5EE",
+          "contrast": 10.45,
+          "use": "Any text size (AAA)"
+        }
+      },
+      {
+        "id": "slot-selected",
+        "role": "Selected time",
+        "use": "Text on the selected time slot.",
+        "minimum": 4.5,
+        "light": {
+          "text": "#16202C",
+          "ground": "#DDE6F3",
+          "contrast": 13.06,
+          "use": "Any text size (AAA)"
+        },
+        "dark": {
+          "text": "#D0D8E4",
+          "ground": "#22324D",
+          "contrast": 8.96,
+          "use": "Any text size (AAA)"
+        }
+      },
+      {
+        "id": "slot-border",
+        "role": "Time slot outline",
+        "use": "The outline of a time slot that can be chosen.",
+        "minimum": 3,
+        "light": {
+          "text": "#7B8595",
+          "ground": "#FFFFFF",
+          "contrast": 3.72,
+          "use": "Large text and graphics only"
+        },
+        "dark": {
+          "text": "#7E8CA3",
+          "ground": "#172131",
+          "contrast": 4.75,
+          "use": "Any text size (AA)"
+        }
+      },
+      {
+        "id": "field-border",
+        "role": "Field outline",
+        "use": "The outline of a form field.",
+        "minimum": 3,
+        "light": {
+          "text": "#7B8595",
+          "ground": "#FFFFFF",
+          "contrast": 3.72,
+          "use": "Large text and graphics only"
+        },
+        "dark": {
+          "text": "#7E8CA3",
+          "ground": "#172131",
+          "contrast": 4.75,
+          "use": "Any text size (AA)"
+        }
+      },
+      {
+        "id": "error",
+        "role": "Error text",
+        "use": "A message a person can act on, beside an icon.",
+        "minimum": 4.5,
+        "light": {
+          "text": "#C42B13",
+          "ground": "#FFFFFF",
+          "contrast": 5.67,
+          "use": "Any text size (AA)"
+        },
+        "dark": {
+          "text": "#EE9580",
+          "ground": "#172131",
+          "contrast": 7.12,
+          "use": "Any text size (AAA)"
+        }
+      },
+      {
+        "id": "error-banner",
+        "role": "Error on the banner",
+        "use": "Error text on the banner ground.",
+        "minimum": 4.5,
+        "light": {
+          "text": "#C42B13",
+          "ground": "#ECEBE5",
+          "contrast": 4.74,
+          "use": "Any text size (AA)"
+        },
+        "dark": {
+          "text": "#EE9580",
+          "ground": "#202D42",
+          "contrast": 6.1,
+          "use": "Any text size (AA)"
+        }
+      },
+      {
+        "id": "banner",
+        "role": "Offline banner",
+        "use": "Text on the Offline and Reconnecting banners.",
+        "minimum": 4.5,
+        "light": {
+          "text": "#16202C",
+          "ground": "#ECEBE5",
+          "contrast": 13.76,
+          "use": "Any text size (AAA)"
+        },
+        "dark": {
+          "text": "#D0D8E4",
+          "ground": "#202D42",
+          "contrast": 9.65,
+          "use": "Any text size (AAA)"
+        }
+      }
+    ],
+    "never": [
+      {
+        "color": "Cornflower",
+        "notFor": "small text on Paper or White (4.42:1 on Paper)"
+      },
+      {
+        "color": "Cornflower or Cornflower Light",
+        "notFor": "a status, a warning or an error"
+      },
+      {
+        "color": "Hairline or Night Line",
+        "notFor": "the only boundary of a control"
+      },
+      {
+        "color": "Error Red or Error Light",
+        "notFor": "anything but error text and the Not sent status, and never without words and an icon"
+      }
+    ],
+    "notes": "Ratios are WCAG 2.2 contrast, computed from the hex values. Text and labels need 4.5:1; a large headline, the focus ring, artwork and outlines need 3:1. A pair that passes here says nothing about a whole product built with it, or about whether a screen reads well. Hairline only divides; it is never the only boundary of a control.",
+    "scheme": {
+      "head": "Light first, dark complete, and the direction on its own.",
+      "light": "Light is the default because patients book in daylight on a phone and staff read the day under room lighting. Paper is the page, White the cards.",
+      "dark": "Dark is complete, not an inversion: its own lighter Cornflower, its own softer text (Mist, not white), its own error color and its own status colors, every pair checked.",
+      "direction": "Color scheme and text direction change independently: any of the four combinations (light or dark, left-to-right or right-to-left) is a real screen. The booking card is the same in each; only the values and the reading order change.",
+      "note": "The switch is a demonstration in this book. In FableBook the same two settings are cases of one screen."
+    },
+    "print": "Not specified: proof against a physical swatch; no CMYK or Pantone values are given."
+  },
+  "type": {
+    "display": {
+      "family": "Rubik",
+      "weights": "Regular (400), SemiBold (600) and Bold (700). Bold for the logo word and large headlines; SemiBold for headings, names and labels; Regular for text and notes.",
+      "css": "Rubik, system-ui, sans-serif",
+      "use": "Everything in English: the logo word, headings, names, times, notes and labels.",
+      "why": "A softly rounded sans that stays friendly without being childish, with figures of equal width (tabular numerals) for times and references. It draws a capital I and a lowercase l as the same bar, so identifiers keep a letter prefix and digits."
+    },
+    "text": {
+      "family": "Rubik",
+      "weights": "Regular (400), SemiBold (600) and Bold (700). Bold for the logo word and large headlines; SemiBold for headings, names and labels; Regular for text and notes.",
+      "css": "Rubik, system-ui, sans-serif",
+      "use": "Everything in English: the logo word, headings, names, times, notes and labels.",
+      "why": "A softly rounded sans that stays friendly without being childish, with figures of equal width (tabular numerals) for times and references. It draws a capital I and a lowercase l as the same bar, so identifiers keep a letter prefix and digits."
+    },
+    "arabicExamples": {
+      "family": "Rubik Arabic",
+      "weights": "Regular (400) and SemiBold (600), as a subset of exactly the characters in this book’s examples.",
+      "css": "Rubik, system-ui, sans-serif",
+      "use": "Arabic in examples only: patient names, short labels, validation text and mixed-direction lines.",
+      "why": "Rubik’s own Arabic letters are drawn by the type designer to match the Latin ones in weight, stroke ends and width, so an English clinician name inside an Arabic line does not look pasted in. The Arabic is set 93.3 percent as large so the two read at one size."
+    },
+    "license": "Both are the same SIL Open Font License 1.1 family, Rubik, from Google Fonts. The license text is in the assets fonts folder.",
+    "hierarchy": [
+      {
+        "role": "Display",
+        "face": "Rubik",
+        "weight": 700,
+        "sizePx": 40,
+        "lineHeight": 1.2,
+        "tracking": "-0.4 px",
+        "sample": "Book a time that is really free",
+        "use": "Large headlines and the logo word. One line, two at most.",
+        "sizePxAtLargerText130": 52
+      },
+      {
+        "role": "Heading",
+        "face": "Rubik",
+        "weight": 600,
+        "sizePx": 22,
+        "lineHeight": 1.273,
+        "tracking": "0",
+        "sample": "Today, Fri Oct 30",
+        "use": "Screen titles.",
+        "sizePxAtLargerText130": 29
+      },
+      {
+        "role": "Name",
+        "face": "Rubik",
+        "weight": 600,
+        "sizePx": 15,
+        "lineHeight": 1.333,
+        "tracking": "0",
+        "sample": "Ana Reyes",
+        "use": "Patient and clinician names in lists and on appointment blocks.",
+        "sizePxAtLargerText130": 20
+      },
+      {
+        "role": "Body",
+        "face": "Rubik",
+        "weight": 400,
+        "sizePx": 15,
+        "lineHeight": 1.4,
+        "tracking": "0",
+        "sample": "Your appointment is booked for 9:30 AM.",
+        "use": "Interface text and notes.",
+        "sizePxAtLargerText130": 20
+      },
+      {
+        "role": "Label",
+        "face": "Rubik",
+        "weight": 600,
+        "sizePx": 14,
+        "lineHeight": 1.429,
+        "tracking": "0",
+        "sample": "Book appointment",
+        "use": "Button and field labels.",
+        "sizePxAtLargerText130": 18
+      },
+      {
+        "role": "Caption",
+        "face": "Rubik",
+        "weight": 400,
+        "sizePx": 13,
+        "lineHeight": 1.538,
+        "tracking": "0",
+        "sample": "9:30 AM to 10:00 AM EDT",
+        "use": "Times, time zones and secondary text.",
+        "sizePxAtLargerText130": 17
+      },
+      {
+        "role": "Chip",
+        "face": "Rubik",
+        "weight": 600,
+        "sizePx": 12,
+        "lineHeight": 1.333,
+        "tracking": "0",
+        "sample": "Scheduled",
+        "use": "Status words in chips.",
+        "sizePxAtLargerText130": 16
+      },
+      {
+        "role": "Arabic example",
+        "face": "Rubik",
+        "weight": 400,
+        "sizePx": 16,
+        "lineHeight": 1.75,
+        "tracking": "0",
+        "sample": "احجز موعدًا",
+        "use": "Arabic in examples, on a taller line.",
+        "sizePxAtLargerText130": 21
+      }
+    ],
+    "rules": [
+      "The logo word is outlined from Rubik Bold and is never retyped. Everywhere else the name is ordinary text.",
+      "One family for English: headings are Rubik SemiBold, text is Rubik Regular. Times and counts use tabular numerals.",
+      "Identifiers keep a letter prefix and digits (APT-0042, CLY-482917), because Rubik draws a capital I and a lowercase l as one bar. Never an identifier that is only letters I and l, or only 1, l and I.",
+      "Sizes are in px at the default text setting. At a larger setting every size grows by the same factor and the hierarchy stays.",
+      "Arabic uses Rubik Arabic where the subset has the character; a missing character shows a labeled system fallback, and the full Rubik file is in the handoff for other Arabic sample text."
+    ],
+    "arabic": {
+      "note": "Arabic appears here only as usage examples. Clinicly has no Arabic type system, voice or localized pages, and every Arabic line in this book is a model’s wording, labeled as not reviewed by a native reader.",
+      "fallback": "If a character is missing from the subset, Chrome falls back to the system’s Arabic face (on macOS, for example, Geeza Pro or Al Bayan). That fallback was not tested on Windows or Android. The page shows a labeled system fallback instead of growing the subset; the full Rubik variable file ships in the handoff for other Arabic sample text.",
+      "mirroring": {
+        "flips": [
+          [
+            "chev-l",
+            "Back and next chevrons"
+          ],
+          [
+            "send",
+            "Send and other forward-motion arrows"
+          ],
+          [
+            "bar",
+            "Progress bars fill from the reading start"
+          ]
+        ],
+        "keeps": [
+          [
+            "clock",
+            "Clock"
+          ],
+          [
+            "check",
+            "Check mark"
+          ],
+          [
+            "calendar",
+            "Calendar, bell and phone"
+          ],
+          [
+            "logo",
+            "The logo, and the order of digits in APT-0042, dates and times"
+          ]
+        ],
+        "source": "Source for the mirroring rules and the digit note: Apple Human Interface Guidelines, Right to left, https://developer.apple.com/design/human-interface-guidelines/right-to-left (page data read November 11, 2026: flip icons that show forward or backward motion and progress controls; do not flip clocks, check marks, logos or the digits of a number; Arabic text may use Western or Eastern Arabic numerals). Material Design’s bidirectionality page needs script to render and was not read. This is a reading of a guide, not a native reviewer.",
+        "digits": "Western digits (0123456789) are the default in both English and Arabic pictures. Arabic-Indic digits (٠١٢٣٤٥٦٧٨٩) appear once, as a labeled example beside Western digits."
+      },
+      "label": "Arabic wording not reviewed by a native reader",
+      "sampleLines": 37
+    }
+  },
+  "shape": {
+    "spacing": {
+      "unit": "4 px",
+      "step-2": "8 px",
+      "step-3": "12 px",
+      "step-4": "16 px",
+      "step-6": "24 px",
+      "step-8": "32 px",
+      "control-height": "44 px",
+      "day-hour": "128 px"
+    },
+    "radius": {
+      "card": "16 px",
+      "button": "12 px",
+      "block": "8 px",
+      "pill": "999 px"
+    },
+    "focus": {
+      "width": "3 px",
+      "offset": "2 px"
+    },
+    "logoSizes": {
+      "clear-space": "8 px",
+      "lockup-min-height": "16 px",
+      "symbol-min-height": "24 px",
+      "favicon-size": "16 px"
+    },
+    "rules": [
+      "One spacing scale in 4 px steps: 4, 8, 12, 16, 24, 32 px. Every gap and padding in the screens is one of these; the book’s own pages are checked against the scale.",
+      "Controls are 44 px tall: a button, a field and a time slot. That is also the least size of a tap target.",
+      "Radii: 16 px for cards and panels, 12 px for buttons and fields, 8 px for appointment blocks, and a full pill for time slots and status chips.",
+      "The keyboard focus ring is 3 px wide and 2 px away from the control, Cornflower on light and Cornflower Light on dark, at least 3:1 against what it sits on.",
+      "One hour in the day view is 128 px tall; an appointment block is sized from its start and its length against that."
+    ]
+  },
+  "voice": {
+    "summary": "Calm and plain: Clinicly says what happened and what to do next, in the words a person would use.",
+    "tone": [
+      {
+        "channel": "A time that was just taken",
+        "plainToWarm0to4": 0,
+        "example": "That time was just taken. Choose another time."
+      },
+      {
+        "channel": "A note that did not save",
+        "plainToWarm0to4": 0,
+        "example": "The note was not saved. Your text is still here. Try again."
+      },
+      {
+        "channel": "A screen you cannot open",
+        "plainToWarm0to4": 0,
+        "example": "You do not have access to patient details. Ask the clinic manager."
+      },
+      {
+        "channel": "A reminder that did not send",
+        "plainToWarm0to4": 1,
+        "example": "Reminder not sent. No phone number on file."
+      },
+      {
+        "channel": "A booking confirmed",
+        "plainToWarm0to4": 2,
+        "example": "Booked. Friday, Oct 30 at 9:30 AM EDT with Ana Reyes."
+      },
+      {
+        "channel": "A welcome to the clinic",
+        "plainToWarm0to4": 3,
+        "example": "Welcome to Harbor Street Clinic. Pick a time that suits you."
+      }
+    ],
+    "toneNote": "The voice never changes; the tone shifts with where the words appear. Clinicly is plain when something goes wrong and a little warmer when someone has just booked. It never makes a joke about a failure, never promises a clinical outcome and never gives medical advice.",
+    "thisNotThat": [
+      {
+        "say": "That time was just taken. Choose another time.",
+        "notThis": "Oops! Someone beat you to it."
+      },
+      {
+        "say": "The note was not saved. Your text is still here. Try again.",
+        "notThis": "Error: save failed."
+      },
+      {
+        "say": "You do not have access to patient details. Ask the clinic manager.",
+        "notThis": "Access denied for Jo Marsh."
+      },
+      {
+        "say": "Reminder not sent. No phone number on file.",
+        "notThis": "Reminder failed."
+      },
+      {
+        "say": "Booked. Friday, Oct 30 at 9:30 AM EDT with Ana Reyes.",
+        "notThis": "Your slot is locked in!"
+      },
+      {
+        "say": "Your reminder says only the time, the clinic and how to change it.",
+        "notThis": "Your reminder says how your knee is doing."
+      }
+    ],
+    "inclusive": [
+      "Start from the person. Say what they were doing and what happened before any technical word.",
+      "Say what to do next. Every message about a problem ends with a step: Try again, choose another time, ask the clinic manager.",
+      "Name the screen, not the patient. A denied screen names what cannot be opened; it never shows who or what is behind it.",
+      "Write for larger text and for Arabic. Short lines and plain words still read well 30% larger and when translated."
+    ],
+    "name": {
+      "rule": "Clinicly, one word with a capital C, in running text. In code, files and web addresses it is `clinicly`.",
+      "never": [
+        {
+          "form": "CLINICLY",
+          "why": "except as a 12 px label in capitals"
+        },
+        {
+          "form": "ClinicLy, Clinic.ly",
+          "why": "one word, one capital"
+        },
+        {
+          "form": "clinicly",
+          "why": "in running text (code and addresses only)"
+        },
+        {
+          "form": "Clinicly’s app, the Clinicly platform",
+          "why": "Clinicly is the app; say Clinicly"
+        }
+      ],
+      "descriptor": "Call it “a clinic app for phone and desktop”. Describe what it does in the user’s terms: appointments, patients, visit notes, reminders.",
+      "clearance": "The name is not cleared. It was checked on November 11, 2026 against the US, United Arab Emirates and Saudi Arabia app stores through a loose search, and against four web addresses by DNS only; three of the four addresses are held by others. No app of exactly this name appeared in the US store results, which is not proof of anything. Trademark registers, other regions and other languages were not searched. This is not proof of availability or of a legal conflict. Clinicly is kept because it is a fictional brand."
+    },
+    "terms": [
+      {
+        "term": "Patient",
+        "meaning": "The person receiving care.",
+        "avoid": "client, customer, member"
+      },
+      {
+        "term": "Clinician",
+        "meaning": "The person providing care. One word, always.",
+        "avoid": "provider, practitioner, doctor"
+      },
+      {
+        "term": "Appointment",
+        "meaning": "A scheduled booking.",
+        "avoid": "session, reservation"
+      },
+      {
+        "term": "Slot",
+        "meaning": "An available start time and length.",
+        "avoid": "window"
+      },
+      {
+        "term": "Visit",
+        "meaning": "A care encounter that actually took place; not the booking.",
+        "avoid": ""
+      },
+      {
+        "term": "Visit note",
+        "meaning": "The text recorded for a visit.",
+        "avoid": "chart, report"
+      },
+      {
+        "term": "Reminder",
+        "meaning": "The message about an appointment.",
+        "avoid": "alert"
+      },
+      {
+        "term": "Clinic",
+        "meaning": "The place that provides care. One word, always.",
+        "avoid": "practice, facility"
+      }
+    ],
+    "actions": [
+      "Book appointment",
+      "Reschedule",
+      "Cancel appointment",
+      "Save note",
+      "Try again"
+    ],
+    "termsNote": "The actions are Book appointment, Reschedule, Cancel appointment, Save note and Try again, used the same way on every screen. Appointment statuses are Scheduled, Completed, Canceled and Missed; reminder delivery is Scheduled, Sent and Not sent. In FableBook’s words, a scenario is one screen in one case and a case is what a user is going through: the happy path, empty, many, an error, long text. Clinicly’s own words are the ones above."
+  },
+  "imagery": {
+    "guidance": "Edition 1 has no brand photography. Clinicly’s pictures are the screens themselves: real names, real times and the real status words, drawn flat. People appear as a name and an initial on a neutral ground, never on Cornflower or a status color.",
+    "show": [
+      {
+        "subject": "An initial on a neutral ground",
+        "detail": "When a person has no photo, show the first letter of their name on Fog or Night High."
+      },
+      {
+        "subject": "The day as blocks of time",
+        "detail": "Show appointments as rounded blocks on a day, with a name, a time and a status word."
+      }
+    ],
+    "never": [
+      "A stethoscope, cross, heart or pulse line",
+      "A smiling doctor in a white coat",
+      "A pill, a syringe or a caduceus",
+      "Blue gloves and floating medical icons",
+      "A Cornflower avatar ground",
+      "A status color as an avatar ground"
+    ],
+    "why": "Clinicly is about real people and a real time. Medical clip art says any health product and can read as a promise about care, and a Cornflower or red avatar ground makes a person look like a button or an error.",
+    "note": "The pictures in this book are illustrations drawn from Clinicly’s real labels and structure. They show the layout this book recommends, not screenshots of a product, and every name and time is invented."
+  },
+  "graphicElements": {
+    "head": "One shape in the app: the booked block.",
+    "intro": "The block is the brand’s only graphic device. It is a rounded rectangle with a 8 px corner radius when it is an appointment on the day view. A block holds a name, a time and a status word, and its left edge carries the status color.",
+    "items": [
+      [
+        "An appointment",
+        "A White or Night Raised block with a Hairline border and a 4 px status-colored left edge. The selected appointment has a 2 px Cornflower border."
+      ],
+      [
+        "A time slot",
+        "A pill (999 px radius) with a Border Strong outline. The selected slot is filled with Cornflower Tint."
+      ]
+    ],
+    "never": "The block never repeats as a pattern, never fills a background, and never frames anything but an appointment or a slot. A block is not a UI component: its states, sizes and variants belong to the app."
+  },
+  "legal": [
+    "Clinicly is a fictional brand, made to give FableBook demo screens a believable clinic app.",
+    "The name is not cleared: other products already use the name Clinicly.",
+    "Fonts are SIL Open Font License 1.1; the license text is in the assets fonts folder.",
+    "The logo and this book are released under the same terms as the earlier books in this series, a default to confirm."
+  ],
+  "contact": [
+    "Clinicly is fictional and has no owner or approver. Questions about this book go to the FableBook maintainers, through the project’s issue tracker.",
+    "Approval: none is needed to use these files in FableBook demo screens, under the rules in this book."
+  ],
+  "notNeeded": [
+    {
+      "item": "Print",
+      "why": "Clinicly lives on screens. This edition gives no print sizes and no print colors."
+    },
+    {
+      "item": "A mascot",
+      "why": "A clinic app is trusted for being clear. A character would compete with the person booking."
+    },
+    {
+      "item": "Sound",
+      "why": "Reminder sounds belong to the phone. Edition 1 defines none."
+    },
+    {
+      "item": "Motion and logo animation",
+      "why": "The logo is a static symbol and word, and the screens need no signature motion. A motion version can be added later."
+    },
+    {
+      "item": "Brand photography",
+      "why": "The day is the picture; people appear as a name and an initial."
+    },
+    {
+      "item": "Billing and amounts",
+      "why": "Clinicly does not show prices or invoices in this edition."
+    }
+  ],
+  "toReview": [
+    {
+      "choice": "Light is the default theme.",
+      "detail": "The brief asks for light as the default with a complete dark theme, because patients book in daylight and staff read the day under room lighting."
+    },
+    {
+      "choice": "The accent was darkened after a first read.",
+      "detail": "The first Cornflower gave a 4.16:1 label on the Book appointment button while being declared at 3:1, so the check passed and the reading was right. The accent is now darker, the label is White, and the pair is declared at 4.5:1."
+    },
+    {
+      "choice": "The symbol is a disc with a wedge pulled out.",
+      "detail": "A rounded block inset in the disc was tried after the first read and dropped: it looked like a toggle or a phone screen, a stock app-icon device. The wedge keeps its own shape, with softened corners."
+    },
+    {
+      "choice": "The asset license is a default.",
+      "detail": "The logo and book files carry the same terms as the earlier books, labeled as a default until confirmed."
+    },
+    {
+      "choice": "No photography in edition 1.",
+      "detail": "People appear as a name and an initial on a neutral ground."
+    },
+    {
+      "choice": "The larger text sizes are defaults.",
+      "detail": "The larger setting is 130% of each size, rounded; the hierarchy is kept, not tested with people at that size."
+    },
+    {
+      "choice": "Clear space and minimum sizes are untested with people.",
+      "detail": "The numbers come from the logo drawings and a model’s read of size sheets; no person has looked at the logo at 16 px."
+    },
+    {
+      "choice": "The Arabic wording is not reviewed.",
+      "detail": "Every Arabic line is a model’s wording and is labeled as such. The right-to-left layouts follow Apple’s Right to left guidance, read from its page data, and were not checked with a native reader or on a device."
+    },
+    {
+      "choice": "The Arabic font has one fallback plan.",
+      "detail": "Rubik Arabic is embedded as a subset of the examples; anything else uses the full variable file in the handoff or a labeled system fallback."
+    },
+    {
+      "choice": "The colors and type are deliberately ordinary.",
+      "detail": "The owner read them as generic and accepted that for a clinic demo brand. They are chosen to look like a clinic product, not to be distinctive."
+    },
+    {
+      "choice": "The name is not cleared.",
+      "detail": "Other products use the name Clinicly. It is kept because the brand is fictional."
+    },
+    {
+      "choice": "The proportions of color are estimates.",
+      "detail": "The percentages on the color pages are estimates of a typical screen, not measurements."
+    },
+    {
+      "choice": "Persona names and roles are invented.",
+      "detail": "Every person, role and clinic in this book is fictional."
+    },
+    {
+      "choice": "The application pages are examples, not a user interface specification.",
+      "detail": "The Appointments, Booking, Patients, Visit notes and Reminders pictures are generic drawings of the identity in use, made from the records file. The product decides the real screens. The records file and its check are handed over beside this folder, not inside it."
+    }
+  ],
+  "notChecked": "Name and trademark clearance were not searched beyond a few app stores and web addresses. Logo legibility was checked on size sheets by a model, not with people. Contrast is computed for the pairs listed here, not for a whole product. The Arabic examples were read by a model, not a native reader. The color scheme and direction switch was exercised in Chrome only. Nothing was run on a real device or in Safari. Print color was not specified.",
+  "retired": [],
+  "fonts": {
+    "source": {
+      "repo": "https://github.com/google/fonts",
+      "commit": "b68b528a75da7d9b73f3928899c07a23083a6633"
+    },
+    "files": [
+      {
+        "path": "ofl/rubik/Rubik[wght].ttf",
+        "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+        "file": "Rubik[wght].ttf"
+      },
+      {
+        "path": "ofl/rubik/OFL.txt",
+        "sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb",
+        "file": "OFL-Rubik.txt"
+      }
+    ],
+    "embedded": [
+      {
+        "id": "lat-rubik-400",
+        "family": "Rubik",
+        "weight": 400,
+        "bytes": 19344,
+        "sha256": "0f675788aec5ce4d62dc23b80db49ce9d8e5e72177c8f6030339ca3b56de9945"
+      },
+      {
+        "id": "lat-rubik-600",
+        "family": "Rubik",
+        "weight": 600,
+        "bytes": 19492,
+        "sha256": "88a586be3c5274a02048db4c50c19d4dc225668006d6c0a021c375911801ff8d"
+      },
+      {
+        "id": "lat-rubik-700",
+        "family": "Rubik",
+        "weight": 700,
+        "bytes": 19528,
+        "sha256": "7e6d7abf6dfd125bc39884cde2bbf3bdaf94204c6df5ee632ed99851f6c980a0"
+      },
+      {
+        "id": "ar-rubik-400",
+        "family": "Rubik Arabic",
+        "weight": 400,
+        "bytes": 15432,
+        "sha256": "0fb1ff1ca21cdccaf955b27f0b2d2cc4eb7e36ae2c5e146be5997b6458b1d30b"
+      },
+      {
+        "id": "ar-rubik-600",
+        "family": "Rubik Arabic",
+        "weight": 600,
+        "bytes": 15672,
+        "sha256": "a3053d9252be14016a8287d4b6e44a6cf2efce36ec590c5804ad01a84a83eb58"
+      }
+    ]
+  },
+  "files": [
+    {
+      "need": "Logo on a light background",
+      "files": [
+        "assets/logo/clinicly-lockup-light.svg",
+        "assets/logo/clinicly-symbol-light.svg",
+        "assets/logo/clinicly-symbol-small-light.svg",
+        "assets/logo/clinicly-lockup-light-2048.png"
+      ]
+    },
+    {
+      "need": "Logo on a dark background",
+      "files": [
+        "assets/logo/clinicly-lockup-dark.svg",
+        "assets/logo/clinicly-symbol-dark.svg",
+        "assets/logo/clinicly-symbol-small-dark.svg",
+        "assets/logo/clinicly-lockup-dark-2048.png"
+      ]
+    },
+    {
+      "need": "One color: single-color jobs",
+      "files": [
+        "assets/logo/clinicly-lockup-mono.svg",
+        "assets/logo/clinicly-lockup-mono-dark.svg",
+        "assets/logo/clinicly-symbol-mono.svg",
+        "assets/logo/clinicly-symbol-mono-dark.svg"
+      ]
+    },
+    {
+      "need": "Favicon",
+      "files": [
+        "assets/icon/favicon.svg",
+        "assets/icon/favicon.ico",
+        "assets/icon/favicon-32-light.png",
+        "assets/icon/favicon-16-light.png",
+        "assets/icon/favicon-32-dark.png",
+        "assets/icon/favicon-16-dark.png"
+      ]
+    },
+    {
+      "need": "App tile and avatar",
+      "files": [
+        "assets/icon/clinicly-app-tile-light.svg",
+        "assets/icon/clinicly-app-tile-dark.svg",
+        "assets/icon/clinicly-app-tile-light-1024.png",
+        "assets/icon/clinicly-avatar-light.svg",
+        "assets/icon/clinicly-avatar-dark.svg",
+        "assets/icon/clinicly-avatar-light-512.png"
+      ]
+    },
+    {
+      "need": "Fonts",
+      "files": [
+        "assets/fonts/web/fonts.css",
+        "assets/fonts/variable/Rubik[wght].ttf",
+        "assets/fonts/OFL-Rubik.txt"
+      ]
+    }
+  ]
+}

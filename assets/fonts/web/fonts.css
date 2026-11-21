@@ -1,0 +1,6 @@
+@font-face{font-family:'Rubik';font-style:normal;font-weight:400;font-display:swap;src:url('lat-rubik-400.woff2') format('woff2')}
+@font-face{font-family:'Rubik';font-style:normal;font-weight:600;font-display:swap;src:url('lat-rubik-600.woff2') format('woff2')}
+@font-face{font-family:'Rubik';font-style:normal;font-weight:700;font-display:swap;src:url('lat-rubik-700.woff2') format('woff2')}
+@font-face{font-family:'Rubik Arabic';font-style:normal;font-weight:400;font-display:swap;src:url('ar-rubik-400.woff2') format('woff2')}
+@font-face{font-family:'Rubik Arabic';font-style:normal;font-weight:600;font-display:swap;src:url('ar-rubik-600.woff2') format('woff2')}
+/* Latin subsets; for other scripts use the files in ../variable. */
